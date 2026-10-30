@@ -1,0 +1,22 @@
+Objectif : RAG multimodal avec comparaison de performance.
+
+Deux archis possible : 
+- Parseur/OCR + RAG texte + VLM de génération 
+1. texte extrait et images localisée par le parseur/OCR
+2. texte découpé, vectorisé et stocké
+3. recherche par similarité textuelle 
+4. génération par un modèle Vision-Language depuis conexte recupéré, éventuellement image de la page.
+pb -> perte de la sémantique visiuelle et OCR souvent en échec
+
+- RAG multimodal Natif
+1. page convertie en image et encodage via un VLM
+2. Late-Interaction pour comparer requête textuelle avec patch visuels et texuels de la page
+3. génération par un VLM avec la page la plus pertinente
+-> state of the art
+
+On preferera la seconde option.
+
+papiers de reférences :
+-> ColPali(2024) : late interaction sur les images des documents évitant l'OCR
+-> Qwen2-VL(2024) : VLM récent
+-> Rag Survey (Modular RAG) : detaille comment structurer les briques d'un RAG et concevoir un benchmark d'évaluation
