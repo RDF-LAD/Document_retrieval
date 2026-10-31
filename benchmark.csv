@@ -1,19 +1,19 @@
 ID,type,docs,question,answer,why LLM could not work
-s_hop1,single_hop,image6,Quelles sont les deux m‚thodes pr‚sent‚es pour r‚soudre un problŠme de multi model fittingÿ?,Sequential method et Hough Transform,Il est probable que la sequential method soit devin‚e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat‚gies.
-s_hop2,single_hop,data3,Dans le contexte de la cr‚ation de keyspace cassandra quel a ‚t‚ le paramŠtre selon lequel la table est tri‚e de maniŠre croissanteÿ?,age,impossible
-s_hop3,single_hop,cyber2,Quelles est la premiŠre premiŠre maniŠre de mitiger une attaque par injection SQL pr‚sent‚eÿ?,input sanitization,1 chance sur trois en gros
-s_hop4,single_hop,mida4,Quels sont les 4 types d'extension pr‚sent‚es dans le cadre de l'extension du Kalman filterÿ?,"multistep prediction, exogeneous input, time-varying system, extended KF for non linear system",deviner
-s_hop5,single_hop,dl5,Quelles sont les deux architecture pr‚sent‚es dans le cadre des transformers pour la visionÿ?,ViT et DETR,deviner
-s_hop6,single_hop,archi3,Dans le cadre d'un processeur quelles sont les deux techniques de local scheduling pr‚sent‚esÿ?,Loop unrolling et Software pipelining,deviner
-s_hop7,single_hop,dl7,Quel est l'achitecture pr‚sent‚e dans la section Classical CNNÿ? ,ResNet,deviner
-s_hop8,single_hop,image8,Quel est le nombre de colonnes propos‚es pour le dictionnaire de l'algorithme de k-SVDÿ?,256,deviner
-m_hop1,multi_hop,"data1, data2, data3, data5,data6",Quels sont les diff‚rents langages de programmations li‚es … la gestion de donn‚es noSQL pr‚sents dans les documentsÿ?,"Cassandra, Redis,Spark,Neo4J,MongoDB,Elastic Search",Il peut en deviner certains mais pas plus
-m_hop2,multi_hop,"image7,image8",Quels sont les variantes de l'algorithme ISTA pr‚sent‚es dans la section L1 sparsityÿ?,"Backtracking ISTA, LISTA, FISTA, IRLS, MOD",deviner
-dom1,domain,ML5,Dans l'in‚galit‚ bornant la diff‚rrence entre la loss d'entrainement et la true loss en fonction de VC dimensionÿquelle est le paramŠtre au d‚nominateur de la borneÿ? ,racine du nombre de samples de training,
-dom2,domain, ,D‚cris les 6 m‚thodes de mod‚lisation pr‚sent‚s dans le contexte du Deep learning for 3d point cloud.,"pointbased, multiview, voxel based, graph based, continuous convolution, superpoint based ",
-mc1,multi_choice,ML6,"Quel modŠle n'est pas pr‚sent‚ dans les documents comme un modŠle de classification lin‚aireÿ: KNN, Perceptron, Logistic regression, Ridge Classifier, Naive Bayes  ? ",Ridge classifier,Ridge classifiier
-mc2,multi_choice,NAML2,"Dans l'exemple de trac‚ de graph en python en NAML quel module est utilis‚ÿ: plotly, seaborn, matplotlib, bokeh, Altairÿ? ",matplotlib,
-long1,long_form,mida8,Parmis les 6 transitions pr‚sent‚es dans le contexte de systŠmes identification pr‚sente moi en d‚tail les deux qui sont mises en avant.,"4sid, controllable transition",
-long2,long_form,infra6,"Dans le contexte des harware infrastructures, pr‚sente en detail le continum existant et les avantages et inconv‚nients de chaque type.","Internet of things, Embedded PC, edge computing",
-graph1,graph,mida6,Combien de blocks comporte le diagramme block pr‚sent‚ dans le cadre du Minimum variance controllerÿ?,6,6
-graph2,graph,infra5,"Dans le tableau recapitulatif des performances des diff‚rents RAID, lequels sont indiqu‚s Very Good en write et readÿ?","0, 1, 1+0,6",subjectif
+s_hop1,single_hop,image6,What are the two methods presented for solving a multi-model fitting problem?,Sequential method and Hough Transform,Il est probable que la sequential method soit devinï¿½e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres stratï¿½gies.
+s_hop2,single_hop,data3,"When creating a Cassandra keyspace, what was the parameter used to sort the table in ascending order?",age,impossible
+s_hop3,single_hop,cyber2,What is the very first way described to mitigate an SQL injection attack?,input sanitization,1 chance sur trois en gros
+s_hop4,single_hop,mida4,What are the four types of extension covered in the context of Kalman filter extension?,"multistep prediction, exogeneous input, time-varying system, extended KF for non linear system",deviner
+s_hop5,single_hop,dl5,What are the two architectures presented in the context of transformers for computer vision?,ViT and DETR,deviner
+s_hop6,single_hop,archi3,"In the context of a processor, what are the two local scheduling techniques described?",Loop unrolling and Software pipelining,deviner
+s_hop7,single_hop,dl7,What is the architecture described in the â€˜Classical CNNâ€™ section?,ResNet,deviner
+s_hop8,single_hop,image8,How many columns are proposed for the k-SVD algorithmâ€™s dictionary?,256,deviner
+m_hop1,multi_hop,"data1, data2, data3, data5,data6",What are the different programming languages related to NoSQL data management mentioned in the documents?,"Cassandra, Redis,Spark,Neo4J,MongoDB,Elastic Search",Il peut en deviner certains mais pas plus
+m_hop2,multi_hop,"image7,image8",What are the variants of the ISTA algorithm presented in the â€˜L1 sparsityâ€™ section?,"Backtracking ISTA, LISTA, FISTA, IRLS, MOD",deviner
+dom1,domain,ML5,"In the inequality bounding the difference between the training loss and the true loss as a function of VC, what is the parameter in the denominator of the bound?",square root of the number of sampling examples in the training set,
+dom2,domain,dl4,Describe the six modelling methods presented in the context of deep learning for 3D point clouds.,"pointbased, multiview, voxel based, graph based, continuous convolution, superpoint based ",
+mc1,multi_choice,ML6,"Which of the following models is not described in the documents as a linear classification model: KNN, Perceptron, Logistic regression, Ridge Classifier, Naive Bayes?",Ridge classifier,Ridge classifiier
+mc2,multi_choice,NAML2,"In the example of plotting a graph in Python in the NAML course, which library is used: Plotly, Seaborn, Matplotlib, Bokeh or Altair?",matplotlib,
+long1,long_form,mida8,"Of the six transitions presented in the context of identification systems, please explain in detail the two that are highlighted.","4sid, controllable transition",
+long2,long_form,infra6,"In the context of hardware infrastructure, provide a detailed overview of the existing spectrum and the advantages and disadvantages of each type.","Internet of things, Embedded PC, edge computing",
+graph1,graph,mida6,How many blocks are there in the block diagram presented as part of the â€˜Minimum Variance Controllerâ€™?,6,6
+graph2,graph,infra5,"In the summary table showing the performance of the various RAID configurations, which ones are rated â€˜Very Goodâ€™ for both write and read speeds?","0, 1, 1+0,6",arbitraire mesure

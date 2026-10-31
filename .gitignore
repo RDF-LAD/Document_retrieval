@@ -1,2 +1,4 @@
-/papers
-/data
+papers/
+data/
+venv/
+.byaldi/
