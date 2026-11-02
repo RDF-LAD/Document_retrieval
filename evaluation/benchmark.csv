@@ -1,0 +1,36 @@
+ID,type,docs,question,answer,why LLM could not work,Top 1,top3,Top3-1,moyenne par categorie,,,correct in single hop,k1,cosine similarity RAG,cosine similarity ,LLM as judge ,k3,cosine similarity RAG,cosine similarity ,LLM as judge ,,Cosine 3-1
+s_hop1,single_hop,image6,What are the two methods presented for solving a multi-model fitting problem?,Sequential method and Hough Transform,Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies.,0,0,0,"0,25","0,5",,,,"0,502","0,485",1,,"0,419","0,485",1,,"-0,083"
+s_hop2,single_hop,data3,"When creating a Cassandra keyspace, what was the parameter used to sort the table in ascending order?",age,impossible,1,1,0,,,,bad in multi hop,,"0,094","0,087",0,,"0,096","0,087",0,,"0,002"
+s_hop3,single_hop,cyber2,What is the very first way described to mitigate an SQL injection attack?,input sanitization,1 chance sur trois en gros,0,0,-1,,,,,,no doc found,,0,,no doc found,,0,,0
+s_hop4,single_hop,mida4,What are the four types of extension covered in the context of Kalman filter extension?,"multistep prediction, exogeneous input, time-varying system, extended KF for non linear system",deviner,1,1,0,,,,great in domain,,"0,526","0,553",0,,"0,526","0,553",0,,0
+s_hop5,single_hop,dl5,What are the two architectures presented in the context of transformers for computer vision?,ViT and DETR,deviner,0,0,-1,,,,,,no doc found,,,,no doc found,,0,,0
+s_hop6,single_hop,archi3,"In the context of a processor, what are the two local scheduling techniques described?",Loop unrolling and Software pipelining,deviner,0,0,0,,,,bad in multi choice,,"0,434","0,459",0,,"0,434","0,459",0,,0
+s_hop7,single_hop,dl7,What is the architecture described in the ‘Classical CNN’ section?,ResNet,deviner,0,1,1,,,,,,"0,118","0,193",1,,"0,408","0,193",1,,"0,29"
+s_hop8,single_hop,image8,How many columns are proposed for the k-SVD algorithm’s dictionary?,256,deviner,0,1,1,,,,bad in long,,"0,396","0,208",0,,"0,282","0,208",0,,"-0,114"
+m_hop1,multi_hop,"data1, data2, data3, data5,data6",What are the different programming languages related to NoSQL data management mentioned in the documents?,"Cassandra, Redis,Spark,Neo4J,MongoDB,Elastic Search",Il peut en deviner certains mais pas plus,0,0,0,0,0,,,,"0,132","0,338",1,,"0,132","0,338",1,,0
+m_hop2,multi_hop,"image7,image8",What are the variants of the ISTA algorithm presented in the ‘L1 sparsity’ section?,"Backtracking ISTA, LISTA, FISTA, IRLS, MOD",deviner,0,0,0,,,,good in graph,,"0,264","0,432",0,,"0,626","0,432",0,,"0,362"
+dom1,domain,ML5,"In the inequality bounding the difference between the training loss and the true loss as a function of VC, what is the parameter in the denominator of the bound?",square root of the number of sampling examples in the training set,,1,1,0,1,1,,,,"0,684","0,475",1,,"0,684","0,475",1,,0
+dom2,domain,dl4,Describe the six modelling methods presented in the context of deep learning for 3D point clouds.,"pointbased, multiview, voxel based, graph based, continuous convolution, superpoint based ",,1,1,0,,,,,,"0,401","0,344",0,,"0,488","0,344",0,,"0,087"
+mc1,multi_choice,ML6,"Which of the following models is not described in the documents as a linear classification model: KNN, Perceptron, Logistic regression, Ridge Classifier, Naive Bayes?",Ridge classifier,Ridge classifiier,0,0,0,0,0,,,,"0,465","0,652",1,,"0,448","0,652",0,,"-0,017"
+mc2,multi_choice,NAML2,"In the example of plotting a graph in Python in the NAML course, which library is used: Plotly, Seaborn, Matplotlib, Bokeh or Altair?",matplotlib,,0,0,0,,,,,,"0,831","0,824",0,,"0,845","0,824",0,,"0,014"
+long1,long_form,mida8,"Of the six transitions presented in the context of identification systems, please explain in detail the two that are highlighted.","4sid, controllable transition",,0,0,0,0,0,,,,"0,413","0,376",1,,"0,314","0,376",1,,"-0,099"
+long2,long_form,infra6,"In the context of hardware infrastructure, provide a detailed overview of the existing spectrum and the advantages and disadvantages of each type.","Internet of things, Embedded PC, edge computing",,0,0,0,,,,,,"0,52","0,561",0,,"0,335","0,561",0,,"-0,185"
+graph1,graph,mida6,How many blocks are there in the block diagram presented as part of the ‘Minimum Variance Controller’?,6,6,0,1,1,0,1,,,,"0,741","0,388",0,,"0,741","0,388",0,,0
+graph2,graph,infra5,"In the summary table showing the performance of the various RAID configurations, which ones are rated ‘Very Good’ for both write and read speeds?","0, 1, 1+0,6",arbitraire mesure,0,1,1,,,,,,"0,33","0,442",0,,"0,393","0,442",0,,"0,063"
+rej1,rejection,none,What is the radius of a geostationary satellite’s orbit?,,,22 %,44 %,22 %,,,"0,4481875","0,4281875",moyenne quand doc retrouvé,"0,426","0,365","0,250",,"0,449","0,365","0,250",,"0,02225"
+rej2,rejection,none,What is the name of the main character in Guy de Maupassant’s novel Bel Ami?,,,,,,,,,"0,4260625",moyenne quand doc pas retrouvé,"0,429","0,446","0,385",,"0,448","0,446","0,286",,"0,01925"
+,,,,,,,,,,,,,ecart % doc retrouvé,"16,86 %",,"0,352941176470588",,"22,96 %",,"0,277777777777778",,
+,top1failure,top1sucess,top3failure,top3succes,,,,,,,,,ecart % doc pas retrouvé,"-3,96 %",,,,"0,35 %",,,,
+top1,"12,87","11,75","11,75","10,62",,,,,,,,,,,,,,,,,,
+,"12,12","14,62","9,06","10,56",,,,,,,,,diff doc retrouvé passage 1-3,"0,06",,,,,,,,
+,"10,43","11,68","10,43","11,37",,,,,,,,,diff %,"13,93 %",,,,,,,,
+,"11,56","12,37","11,06",12,,,,,,,,,,,,,,,,,,
+,"11,37","19,5","11,12","16,87",,,,,,,,,diff doc non amélioré passage 1-3,"0,00675",,,,,,,,
+,"13,75","14,31","12,68","12,37",,,,,,,,,diff %,"1,58 %",,,,,,,,
+,"18,75","13,25","16,75","12,75",,,,,,,,,,,,,,,,,,
+,"17,37","15,93","16,87","14,5",,,,,,,,ecart significatif à 95 %,"-0,06",,L’ecart entre k1 et k3 est positiviment significatif dans le cas k3 dans le contexte d’unr etrieval amélioré . Et non significatif positivement dans le contexte des docs non améliorés.,,,,,,,
+,"14,81",,"13,12",,,,,,,,,,,,,,,,,,,
+,"19,25",,"17,37",,,,,,,,,,,,,,,,,,,
+,"14,228","14,17625","13,021","12,63",,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,temps inference,93sec,,,,143sec,,,,,
+,,,,,,,,,,,,sans rag,50sec,,,,,,,,,

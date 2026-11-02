@@ -1,0 +1,146 @@
+[
+    {
+        "ID": "s_hop1",
+        "type": "single_hop",
+        "docs": "image6",
+        "question": "What are the two methods presented for solving a multi-model fitting problem?",
+        "answer": "The two methods are the Sequential method and the Hough Transform.",
+        "why LLM could not work": "Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies."
+    },
+    {
+        "ID": "s_hop2",
+        "type": "single_hop",
+        "docs": "data3",
+        "question": "When creating a Cassandra keyspace, what was the parameter used to sort the table in ascending order?",
+        "answer": "The parameter used is age",
+        "why LLM could not work": "impossible"
+    },
+    {
+        "ID": "s_hop3",
+        "type": "single_hop",
+        "docs": "cyber2",
+        "question": "What is the very first way described to mitigate an SQL injection attack?",
+        "answer": "The very first way described is input sanitization.",
+        "why LLM could not work": "1 chance sur trois en gros"
+    },
+    {
+        "ID": "s_hop4",
+        "type": "single_hop",
+        "docs": "mida4",
+        "question": "What are the four types of extension covered in the context of Kalman filter extension?",
+        "answer": "The four types of extension are multistep prediction, exogeneous input, time-varying system, and extended KF for non linear system.",
+        "why LLM could not work": "deviner"
+    },
+    {
+        "ID": "s_hop5",
+        "type": "single_hop",
+        "docs": "dl5",
+        "question": "What are the two architectures presented in the context of transformers for computer vision?",
+        "answer": "The two architectures are ViT and DETR.",
+        "why LLM could not work": "deviner"
+    },
+    {
+        "ID": "s_hop6",
+        "type": "single_hop",
+        "docs": "Archi3",
+        "question": "In processor architecture, what are the two local scheduling techniques described?",
+        "answer": "The two techniques are Loop unrolling and Software pipelining.",
+        "why LLM could not work": "deviner"
+    },
+    {
+        "ID": "s_hop7",
+        "type": "single_hop",
+        "docs": "dl7",
+        "question": "What is the architecture described in the ‘Classical CNN’ section?",
+        "answer": "The architecture is ResNet.",
+        "why LLM could not work": "deviner"
+    },
+    {
+        "ID": "s_hop8",
+        "type": "single_hop",
+        "docs": "image8",
+        "question": "How many columns are proposed for the k-SVD algorithm’s dictionary?",
+        "answer": "The number of column is 256.",
+        "why LLM could not work": "deviner"
+    },
+    {
+        "ID": "m_hop1",
+        "type": "multi_hop",
+        "docs": "data1, data2, data3, data5,data6",
+        "question": "What are the different programming languages related to NoSQL data management mentioned in the documents?",
+        "answer": "The different programming languages are Cassandra, Redis,Spark,Neo4J,MongoDB,Elastic Search",
+        "why LLM could not work": "Il peut en deviner certains mais pas plus."
+    },
+    {
+        "ID": "m_hop2",
+        "type": "multi_hop",
+        "docs": "image7,image8",
+        "question": "What are the variants of the ISTA algorithm presented in the ‘L1 sparsity’ section?",
+        "answer": "The variants presented are Backtracking ISTA, LISTA, FISTA, IRLS, MOD.",
+        "why LLM could not work": "deviner"
+    },
+    {
+        "ID": "dom1",
+        "type": "domain",
+        "docs": "ML5",
+        "question": "In the inequality bounding the difference between the training loss and the true loss as a function of VC, what is the parameter in the denominator of the bound?",
+        "answer": "The parameter is the square root of the number of sampling examples in the training set.",
+        "why LLM could not work": 0
+    },
+    {
+        "ID": "dom2",
+        "type": "domain",
+        "docs": "dl4",
+        "question": "Describe the six modelling methods presented in the context of deep learning for 3D point clouds.",
+        "answer": "The six modelling methods are pointbased, multiview, voxel based, graph based, continuous convolution, superpoint based.",
+        "why LLM could not work": 0
+    },
+    {
+        "ID": "mc1",
+        "type": "multi_choice",
+        "docs": "ML6",
+        "question": "Which of the following models is not described in the documents as a linear classification model: KNN, Perceptron, Logistic regression, Ridge Classifier, Naive Bayes?",
+        "answer": "The answer is the Ridge classifier",
+        "why LLM could not work": "Ridge classifiier."
+    },
+    {
+        "ID": "mc2",
+        "type": "multi_choice",
+        "docs": "NAML2",
+        "question": "In the plotting example with python in the NAML course, which library is used: Plotly, Seaborn, Matplotlib, Bokeh or Altair?",
+        "answer": "The library used is matplotlib.",
+        "why LLM could not work": 0
+    },
+    {
+        "ID": "long1",
+        "type": "long_form",
+        "docs": "mida8",
+        "question": "Of the six state transitions presented in the context of identification systems, please explain in detail the two that are highlighted.",
+        "answer": "The two hilgited techniques are 4sid, controllable transition.",
+        "why LLM could not work": 0
+    },
+    {
+        "ID": "long2",
+        "type": "long_form",
+        "docs": "infra6",
+        "question": "In the context of hardware infrastructure, provide a detailed overview of the different hardware types between IOE and edge and the advantages and disadvantages of each type.",
+        "answer": "The different harware types are Internet of things, Embedded PC, edge computing.",
+        "why LLM could not work": 0
+    },
+    {
+        "ID": "graph1",
+        "type": "graph",
+        "docs": "mida6",
+        "question": "How many blocks are there in the block diagram presented as part of the ‘Minimum Variance Controller’?",
+        "answer": "There are 6 blocks in the block diagram.",
+        "why LLM could not work": "6"
+    },
+    {
+        "ID": "graph2",
+        "type": "graph",
+        "docs": "infra5",
+        "question": "In the summary table showing the performance of the various RAID configurations, which ones are rated ‘Very Good’ for both write and read speeds?",
+        "answer": "The configurations rated 'Very good' are 0, 1, 1+0, and 6.",
+        "why LLM could not work": "arbitraire mesure"
+    }
+]

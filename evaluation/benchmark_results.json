@@ -1,0 +1,245 @@
+{
+  "summary": {
+    "n_questions": 18,
+    "n_success": 18,
+    "n_errors": 0,
+    "mean_cosine_rag": 0.38109017603306305,
+    "mean_cosine_baseline": 0.4305333329571618,
+    "judge_wins_rag": 6,
+    "judge_wins_baseline": 12,
+    "judge_unparsed": 0,
+    "n_without_retrieved_pages": 2
+  },
+  "per_question": {
+    "0": {
+      "question": "What are the two methods presented for solving a multi-model fitting problem?",
+      "ground_truth": "The two methods are the Sequential method and the Hough Transform.",
+      "retrieved_pages": [
+        "mida1"
+      ],
+      "rag_answer": "The two methods presented for solving a multi-model fitting problem are:\n\n1. **Model Selection**: This method involves choosing the best model from a set of candidate models based on their goodness of fit. The goal is to select the model that best represents the data. This can be done using various criteria such as Akaike Information Criterion (AIC), Bayesian Information Criterion (BIC), or Bayesian Information Criterion for Model Selection (BIC-MS).\n\n2. **Model Combination**: This method involves combining multiple models to improve the overall fit of the data. This can be achieved by using techniques such as weighted averaging, where each model is weighted based on its goodness of fit, or by using techniques like the weighted average of the models.",
+      "baseline_answer": "The two methods presented for solving a multi-model fitting problem are:\n\n1. Model Selection: This method involves selecting the best model from a set of candidate models based on a predefined criterion. The criterion could be based on the goodness of fit, the complexity of the model, or the interpretability of the model. The selected model is then used to generate predictions or estimates for the data.\n\n2. Model Combination: This method involves combining multiple models to improve the overall performance of the model. The combination can be achieved through various techniques such as weighted averaging, averaging, or averaging with weights. The resulting model is then used to generate predictions or estimates for the data.\n\nBoth methods require careful consideration of the trade-offs between model complexity, goodness of fit, and interpretability. The choice of method depends on the specific requirements of the problem at hand.",
+      "cosine_rag": 0.5019389390945435,
+      "cosine_baseline": 0.4848651885986328,
+      "judge_closest": "rag",
+      "judge_raw": "A"
+    },
+    "1": {
+      "question": "When creating a Cassandra keyspace, what was the parameter used to sort the table in ascending order?",
+      "ground_truth": "The parameter used is age",
+      "retrieved_pages": [
+        "data3"
+      ],
+      "rag_answer": "When creating a Cassandra keyspace, the parameter used to sort the table in ascending order is `CREATE TABLE`.",
+      "baseline_answer": "The parameter used to sort the table in ascending order when creating a Cassandra keyspace is `sort_key`.",
+      "cosine_rag": 0.09641057997941971,
+      "cosine_baseline": 0.08721144497394562,
+      "judge_closest": "baseline",
+      "judge_raw": "A"
+    },
+    "2": {
+      "question": "What is the very first way described to mitigate an SQL injection attack?",
+      "ground_truth": "The very first way described is input sanitization.",
+      "retrieved_pages": [],
+      "rag_answer": "Aucun document pertinent n'a été trouvé pour répondre à cette question.",
+      "baseline_answer": "The very first way described to mitigate an SQL injection attack is through the use of parameterized queries. \n\nIn SQL, a parameterized query is a query that uses placeholders (e.g., ?) to represent variables in the query. This allows the user to input data into the query without the risk of SQL injection attacks. \n\nThe placeholders are replaced with actual values during the execution of the query, which prevents the injection of malicious code into the query. This method is considered the most secure way to mitigate SQL injection attacks because it eliminates the risk of injecting malicious code into the query.\n\nOther methods to mitigate SQL injection attacks include:\n\n1. Using prepared statements: This method involves using prepared statements to execute queries. Prepared statements are executed before the query is executed, and the placeholders are replaced with actual values during the execution of the query.\n\n2. Using SQL injection libraries: These libraries are designed to handle SQL injection attacks and provide protection against them.\n\n3. Using input validation: This method involves checking the input data to ensure that it is valid before it is used in the query.\n\n4. Using input sanitization: This method involves sanitizing the input data to remove any malicious code before it is used in the query.\n\n5. Using input encryption: This method involves encrypting the input data to prevent it from being intercepted during the transmission or storage.",
+      "cosine_rag": 0.0099942022934556,
+      "cosine_baseline": 0.4356077313423157,
+      "judge_closest": "baseline",
+      "judge_raw": "B"
+    },
+    "3": {
+      "question": "What are the four types of extension covered in the context of Kalman filter extension?",
+      "ground_truth": "The four types of extension are multistep prediction, exogeneous input, time-varying system, and extended KF for non linear system.",
+      "retrieved_pages": [
+        "mida4"
+      ],
+      "rag_answer": "The four types of extension covered in the context of Kalman filter extension are:\n\n1. **Type I Extension**: This type of extension involves adding a new state variable to the original system. In the context of Kalman filter extension, this would typically involve adding a new state variable to the system to account for additional dynamics or measurements.\n\n2. **Type II Extension**: This type of extension involves adding a new measurement to the original system. In the context of Kalman filter extension, this would typically involve adding a new measurement to the system to account for additional measurements or observations.\n\n3. **Type III Extension**: This type of extension involves adding a new measurement to the original system and also adding a new state variable to the system. In the context of Kalman filter extension, this would typically involve adding a new measurement to the system and also adding a new state variable to the system to account for additional dynamics or measurements.\n\n4. **Type IV Extension**: This type of extension involves adding a new measurement to the original system and also adding a new state variable to the system and also adding a new measurement to the system. In the context of Kalman filter extension, this would typically involve adding a new measurement to the system and also adding a new state variable to the system and also adding a new measurement to the system to account for additional dynamics or measurements.",
+      "baseline_answer": "The four types of extension covered in the context of Kalman filter extension are:\n\n1. State-space extension: This type of extension involves adding a new state variable to the Kalman filter model. The new state variable is added to the existing state vector and the measurement vector. This type of extension is useful when the system being modeled has additional states that are not directly observable.\n\n2. Measurement extension: This type of extension involves adding a new measurement to the Kalman filter model. The new measurement is added to the existing measurement vector and the state vector. This type of extension is useful when the system being modeled has additional measurements that are not directly observable.\n\n3. Observation extension: This type of extension involves adding a new observation to the Kalman filter model. The new observation is added to the existing observation vector and the state vector. This type of extension is useful when the system being modeled has additional observations that are not directly observable.\n\n4. State-space observation extension: This type of extension involves adding a new observation to the Kalman filter model and also adding a new state variable to the model. This type of extension is useful when the system being modeled has additional observations and states that are not directly observable.",
+      "cosine_rag": 0.5262589454650879,
+      "cosine_baseline": 0.5527908802032471,
+      "judge_closest": "baseline",
+      "judge_raw": "A"
+    },
+    "4": {
+      "question": "What are the two architectures presented in the context of transformers for computer vision?",
+      "ground_truth": "The two architectures are ViT and DETR.",
+      "retrieved_pages": [],
+      "rag_answer": "Aucun document pertinent n'a été trouvé pour répondre à cette question.",
+      "baseline_answer": "The two architectures presented in the context of transformers for computer vision are:\n\n1. Transformer architecture: This architecture is a type of neural network that is used for tasks such as image recognition and object detection. It is based on the idea of using a series of layers to transform the input data into a representation that can be used for further analysis. The Transformer architecture uses a series of self-attention layers to learn the relationships between different parts of the input data. This allows the Transformer architecture to learn long-range dependencies between different parts of the input data, which can be useful for tasks such as image recognition and object detection.\n\n2. Transformer encoder-decoder architecture: This architecture is used for tasks such as image translation and captioning. It consists of two parts: an encoder and a decoder. The encoder takes an input image and encodes it into a representation that can be used by the decoder. The decoder then uses this representation to generate a new image or a new caption. The Transformer encoder-decoder architecture uses a series of self-attention layers to learn the relationships between different parts of the input data, which can be useful for tasks such as image translation and captioning.",
+      "cosine_rag": -0.00473606213927269,
+      "cosine_baseline": 0.4450882077217102,
+      "judge_closest": "baseline",
+      "judge_raw": "B"
+    },
+    "5": {
+      "question": "In processor architecture, what are the two local scheduling techniques described?",
+      "ground_truth": "The two techniques are Loop unrolling and Software pipelining.",
+      "retrieved_pages": [
+        "Archi2"
+      ],
+      "rag_answer": "In processor architecture, two local scheduling techniques described are:\n\n1. **Instruction Level Scheduling (ILS)**: This technique schedules instructions within a single instruction unit (SIU) of the processor. It is used to schedule instructions that are executed in parallel. The instructions are scheduled based on their execution time and the dependencies between them.\n\n2. **Data Level Scheduling (DLS)**: This technique schedules instructions that are executed on the same data. It is used to schedule instructions that access the same data. The instructions are scheduled based on the data dependencies and the execution time of the instructions.\n\nBoth techniques are used to improve the performance of the processor by minimizing the execution time of instructions and minimizing the data dependencies between instructions.",
+      "baseline_answer": "In processor architecture, two local scheduling techniques are:\n\n1. Priority-based scheduling: This technique assigns a priority to each thread or process based on its importance or urgency. The scheduler then schedules the threads or processes with the highest priority first. This technique is commonly used in multi-threaded applications where the priority of each thread is determined based on its execution time or resource requirements.\n\n2. Round-robin scheduling: This technique schedules threads or processes in a fixed order, typically starting with the highest priority thread and moving through the lower priority threads in a circular fashion. This technique is commonly used in single-threaded applications where the order of execution is predetermined and does not change.\n\nBoth of these techniques are used to manage the execution of threads or processes in a processor.",
+      "cosine_rag": 0.434126079082489,
+      "cosine_baseline": 0.45913323760032654,
+      "judge_closest": "baseline",
+      "judge_raw": "A"
+    },
+    "6": {
+      "question": "What is the architecture described in the ‘Classical CNN’ section?",
+      "ground_truth": "The architecture is ResNet.",
+      "retrieved_pages": [
+        "Archi1"
+      ],
+      "rag_answer": "The architecture described in the 'Classical CNN' section is a convolutional neural network (CNN) architecture. CNNs are a type of neural network that are particularly effective for tasks such as image and video classification, object detection, and image segmentation. They are based on the idea of using convolutional filters to extract features from images or videos.\n\nIn the 'Classical CNN' section, the authors describe a CNN architecture that uses a series of convolutional layers to extract features from the input image. Each convolutional layer consists of a set of filters that are applied to the input image and then passed through a non-linear activation function. The filters are typically designed to capture features such as edges, corners, and textures in the image.\n\nThe authors also describe how the convolutional layers are connected to each other in a specific way. For example, they may use a pooling layer to reduce the spatial dimensions of the input image before passing it through the convolutional layers. They may also use a fully connected layer to classify the features extracted by the convolutional layers.\n\nOverall, the 'Classical CNN' section provides a detailed description of the architecture of a CNN, including the types of layers used, the way they are connected, and the features they extract. This information is useful for researchers and practitioners who are interested in understanding the basic principles of CNNs and how they can be used for various tasks.",
+      "baseline_answer": "The architecture described in the \"Classical CNN\" section refers to a type of neural network architecture used in computer vision tasks. It is a convolutional neural network (CNN) that uses convolutional layers to extract features from images. \n\nIn a classical CNN, the input image is first passed through a series of convolutional layers, which perform a series of operations on the image data. These operations include filtering the image data with a set of filters that are designed to detect features such as edges, corners, and textures. \n\nThe output of the convolutional layers is then passed through a series of pooling layers, which reduce the spatial dimensions of the image data. Pooling layers are used to reduce the amount of data that needs to be processed by the subsequent layers, which can help to improve the computational efficiency of the network. \n\nThe output of the pooling layers is then passed through a series of fully connected layers, which perform a series of operations on the data to classify or regress the image data. \n\nThe architecture described in the \"Classical CNN\" section typically includes multiple convolutional layers, pooling layers, and fully connected layers. The number of layers and the type of layers used can vary depending on the specific application and the desired performance of the network.",
+      "cosine_rag": 0.11814972758293152,
+      "cosine_baseline": 0.19306297600269318,
+      "judge_closest": "rag",
+      "judge_raw": "A"
+    },
+    "7": {
+      "question": "How many columns are proposed for the k-SVD algorithm’s dictionary?",
+      "ground_truth": "The number of column is 256.",
+      "retrieved_pages": [
+        "NAML2"
+      ],
+      "rag_answer": "The k-SVD algorithm's dictionary typically consists of several columns. The number of columns depends on the specific application and the dimensionality of the data. In general, the number of columns can range from a few to several hundred or more, depending on the problem at hand.",
+      "baseline_answer": "The k-SVD algorithm is a method used to find the sparsest approximation of a matrix to another matrix. The number of columns proposed for the k-SVD algorithm's dictionary is typically equal to the number of columns in the original matrix. This means that the algorithm will find the sparsest approximation of the original matrix using the columns of the dictionary.",
+      "cosine_rag": 0.39646196365356445,
+      "cosine_baseline": 0.20856735110282898,
+      "judge_closest": "baseline",
+      "judge_raw": "A"
+    },
+    "8": {
+      "question": "What are the different programming languages related to NoSQL data management mentioned in the documents?",
+      "ground_truth": "The different programming languages are Cassandra, Redis,Spark,Neo4J,MongoDB,Elastic Search",
+      "retrieved_pages": [
+        "data6"
+      ],
+      "rag_answer": "The different programming languages related to NoSQL data management mentioned in the documents are:\n\n1. **MongoDB** - A NoSQL database management system developed by MongoDB Inc.\n2. **Cassandra** - A distributed, open-source NoSQL database developed by Apache.\n3. **Hadoop** - A distributed computing framework developed by Apache.\n4. **HBase** - A NoSQL distributed database developed by Apache.\n5. **CouchDB** - A NoSQL database management system developed by Couchbase, Inc.\n6. **Redis** - A key-value store developed by Redis Labs.\n7. **Elasticsearch** - A NoSQL search engine developed by Elasticsearch, Inc.\n8. **Spark** - A machine learning framework developed by Apache.\n9. **Hadoop Distributed File System (HDFS)** - A distributed file system developed by Apache.\n10. **Hadoop Distributed File System (HDFS)** - A distributed file system developed by Apache.\n11. **Hadoop Distributed File System (HDFS)** - A distributed file system developed by Apache.\n12. **Hadoop Distributed File System (HDFS)** - A distributed file system developed by Apache.\n13. **Hadoop Distributed File System (HDFS)** - A distributed file system developed by Apache.\n14. **Hadoop Distributed File System (HDFS)** - A distributed file system developed by Apache.\n15. **Hadoop Distributed File System (HDFS)** - A distributed file system developed by Apache.\n16. **Hadoop Distributed File System (HDFS)** - A distributed file system developed by Apache.\n17. **Hadoop Distributed File System (HDFS)** - A distributed file system developed by Apache.\n18. **Hadoop Distributed File System (HDFS)** - A distributed file system developed by Apache.\n19. **Hadoop Distributed File System (HDFS)** - A distributed file system developed by Apache.\n20. **Hadoop Distributed File System (HDFS)** - A distributed file system developed by Apache.\n21. **Hadoop Distributed File System (HDFS)** - A distributed file system developed by Apache.\n22. **Hadoop Distributed File System (HDFS)** - A distributed file system developed by Apache.\n23. **Hadoop Distributed File System (HDFS)** - A distributed file system developed by Apache.\n24. **Hadoop Distributed File System (HDFS)** - A distributed file system developed by Apache.\n25. **Hadoop Distributed File",
+      "baseline_answer": "The different programming languages related to NoSQL data management mentioned in the documents are:\n\n1. MongoDB: MongoDB is a NoSQL database management system that is used for storing and managing large amounts of data. It is written in JavaScript and is used for storing and managing data in a distributed environment.\n\n2. Cassandra: Cassandra is a distributed, open-source NoSQL database management system that is used for storing and managing data in a distributed environment. It is written in Java and is used for storing and managing data in a distributed environment.\n\n3. Hadoop: Hadoop is a distributed computing framework that is used for storing and managing data in a distributed environment. It is written in Java and is used for storing and managing data in a distributed environment.\n\n4. Apache HBase: HBase is a NoSQL database management system that is used for storing and managing data in a distributed environment. It is written in Java and is used for storing and managing data in a distributed environment.\n\n5. Apache Ignite: Ignite is a NoSQL database management system that is used for storing and managing data in a distributed environment. It is written in Java and is used for storing and managing data in a distributed environment.\n\n6. Apache Kafka: Kafka is a distributed, open-source message broker that is used for storing and managing data in a distributed environment. It is written in Java and is used for storing and managing data in a distributed environment.",
+      "cosine_rag": 0.13268417119979858,
+      "cosine_baseline": 0.3380477726459503,
+      "judge_closest": "rag",
+      "judge_raw": "A"
+    },
+    "9": {
+      "question": "What are the variants of the ISTA algorithm presented in the ‘L1 sparsity’ section?",
+      "ground_truth": "The variants presented are Backtracking ISTA, LISTA, FISTA, IRLS, MOD.",
+      "retrieved_pages": [
+        "image7"
+      ],
+      "rag_answer": "The variants of the ISTA algorithm presented in the 'L1 sparsity' section are:\n\n1. ISTA with L1 regularization:\n   - The L1 regularization term is added to the objective function.\n   - The L1 regularization term penalizes the magnitude of the variables.\n   - The L1 regularization term is used to promote sparsity in the solution.\n\n2. ISTA with L1 regularization and L2 regularization:\n   - The L1 regularization term is added to the objective function.\n   - The L2 regularization term is added to the objective function.\n   - The L1 regularization term and L2 regularization terms are used to promote both sparsity and smoothness in the solution.\n\n3. ISTA with L1 regularization and L2 regularization and L2 regularization:\n   - The L1 regularization term is added to the objective function.\n   - The L2 regularization term is added to the objective function.\n   - The L1 regularization term, L2 regularization term, and L2 regularization term are used to promote both sparsity and smoothness in the solution.\n\n4. ISTA with L1 regularization and L2 regularization and L2 regularization:\n   - The L1 regularization term is added to the objective function.\n   - The L2 regularization term is added to the objective function.\n   - The L1 regularization term, L2 regularization term, and L2 regularization term are used to promote both sparsity and smoothness in the solution.\n\n5. ISTA with L1 regularization and L2 regularization and L2 regularization:\n   - The L1 regularization term is added to the objective function.\n   - The L2 regularization term is added to the objective function.\n   - The L1 regularization term, L2 regularization term, and L2 regularization term are used to promote both sparsity and smoothness in the solution.\n\n6. ISTA with L1 regularization and L2 regularization and L2 regularization:\n   - The L1 regularization term is added to the objective function.\n   - The L2 regularization term is added to the objective function.\n   - The L1 regularization term, L2 regularization term, and L2 regularization term are used to promote both sparsity and smoothness in the solution.\n\n7. ISTA with L1 regularization and L2 regularization and L2 regularization:\n   - The L1 regularization term is added to the objective function.\n   - The L2 regularization term is added to the objective function.\n   - The L1 regularization term, L2 regularization term, and L2 regularization term",
+      "baseline_answer": "The ISTA (Iterative Shrinkage and Thresholding Algorithm) algorithm is a popular method for solving linear inverse problems. In the context of the \"L1 sparsity\" section, the ISTA algorithm is used to solve linear inverse problems with sparsity constraints.\n\nThe variants of the ISTA algorithm presented in this section are:\n\n1. ISTA with L1 regularization: This variant of the ISTA algorithm incorporates L1 regularization into the optimization process. L1 regularization penalizes the magnitude of the coefficients in the solution vector, which can help to identify and remove sparsity in the solution.\n\n2. ISTA with L1 regularization and sparsity constraints: This variant of the ISTA algorithm incorporates both L1 regularization and sparsity constraints into the optimization process. This allows for the identification of both sparsity and sparsity constraints in the solution vector.\n\n3. ISTA with L1 regularization and sparsity constraints and a thresholding operator: This variant of the ISTA algorithm incorporates both L1 regularization and sparsity constraints into the optimization process, but also includes a thresholding operator to further refine the solution.\n\n4. ISTA with L1 regularization and sparsity constraints and a thresholding operator and a regularization parameter: This variant of the ISTA algorithm incorporates both L1 regularization and sparsity constraints into the optimization process, but also includes a regularization parameter to further refine the solution.\n\nThese variants of the ISTA algorithm are used to solve linear inverse problems with sparsity constraints.",
+      "cosine_rag": 0.26446178555488586,
+      "cosine_baseline": 0.4316403865814209,
+      "judge_closest": "baseline",
+      "judge_raw": "A"
+    },
+    "10": {
+      "question": "In the inequality bounding the difference between the training loss and the true loss as a function of VC, what is the parameter in the denominator of the bound?",
+      "ground_truth": "The parameter is the square root of the number of sampling examples in the training set.",
+      "retrieved_pages": [
+        "ML5"
+      ],
+      "rag_answer": "The parameter in the denominator of the bound is the number of training examples, denoted as \\( N \\).",
+      "baseline_answer": "In the context of the VC bound, the parameter in the denominator of the bound that represents the difference between the training loss and the true loss is typically the number of training samples, denoted as \\( n \\). The VC bound states that the training loss is bounded by the true loss plus a constant times the square root of the number of training samples. Mathematically, this can be expressed as:\n\n\\[ \\text{Training Loss} \\leq \\text{True Loss} + C \\sqrt{n} \\]\n\nwhere \\( C \\) is a constant that depends on the complexity of the model and the distribution of the data. The denominator \\( n \\) represents the number of training samples used to estimate the true loss.",
+      "cosine_rag": 0.6837012767791748,
+      "cosine_baseline": 0.47483235597610474,
+      "judge_closest": "rag",
+      "judge_raw": "A"
+    },
+    "11": {
+      "question": "Describe the six modelling methods presented in the context of deep learning for 3D point clouds.",
+      "ground_truth": "The six modelling methods are pointbased, multiview, voxel based, graph based, continuous convolution, superpoint based.",
+      "retrieved_pages": [
+        "dl4"
+      ],
+      "rag_answer": "The six modelling methods presented in the context of deep learning for 3D point clouds are:\n\n1. **Point Clouds**: This method involves representing 3D point clouds as a set of points in 3D space. It is used to represent the geometry of the point cloud and to perform operations such as point cloud registration and matching.\n\n2. **Graph Convolutional Networks (GCNs)**: GCNs are a type of neural network that can be applied to graph data, such as point clouds. They are used to learn features from the point cloud by considering the relationships between points in the cloud. GCNs can be used for tasks such as point cloud classification and segmentation.\n\n3. **Deep Learning with Graphs**: This method involves using deep learning algorithms to process graph data, such as point clouds. It is used to learn representations of the point cloud that can be used for tasks such as point cloud classification and segmentation.\n\n4. **Deep Learning with Graphs and Graph Convolutional Networks**: This method combines deep learning with graph convolutional networks to process graph data. It is used to learn representations of the point cloud that can be used for tasks such as point cloud classification and segmentation.\n\n5. **Deep Learning with Graphs and Graph Convolutional Networks with Graph Neural Networks**: This method combines deep learning with graph convolutional networks and graph neural networks to process graph data. It is used to learn representations of the point cloud that can be used for tasks such as point cloud classification and segmentation.\n\n6. **Deep Learning with Graphs and Graph Convolutional Networks with Graph Neural Networks and Graph Neural Networks**: This method combines deep learning with graph convolutional networks, graph neural networks, and graph neural networks to process graph data. It is used to learn representations of the point cloud that can be used for tasks such as point cloud classification and segmentation.",
+      "baseline_answer": "The six modelling methods presented in the context of deep learning for 3D point clouds are:\n\n1. Point Cloud to Point Cloud (PC2PC) Transfer: This method involves transferring the point cloud data from one domain to another domain. It is used to transfer the point cloud data from a low-resolution domain to a high-resolution domain. This method is used to improve the accuracy of the model by transferring the data from a low-resolution domain to a high-resolution domain.\n\n2. Point Cloud to Point Cloud (PC2PC) Transfer: This method involves transferring the point cloud data from one domain to another domain. It is used to transfer the point cloud data from a low-resolution domain to a high-resolution domain. This method is used to improve the accuracy of the model by transferring the data from a low-resolution domain to a high-resolution domain.\n\n2. Point Cloud to Point Cloud (PC2PC) Transfer: This method involves transferring the point cloud data from one domain to another domain. It is used to transfer the point cloud data from a low-resolution domain to a high-resolution domain. This method is used to improve the accuracy of the model by transferring the data from a low-resolution domain to a high-resolution domain.\n\n3. Point Cloud to Point Cloud (PC2PC) Transfer: This method involves transferring the point cloud data from one domain to another domain. It is used to transfer the point cloud data from a low-resolution domain to a high-resolution domain. This method is used to improve the accuracy of the model by transferring the data from a low-resolution domain to a high-resolution domain.\n\n4. Point Cloud to Point Cloud (PC2PC) Transfer: This method involves transferring the point cloud data from one domain to another domain. It is used to transfer the point cloud data from a low-resolution domain to a high-resolution domain. This method is used to improve the accuracy of the model by transferring the data from a low-resolution domain to a high-resolution domain.\n\n5. Point Cloud to Point Cloud (PC2PC) Transfer: This method involves transferring the point cloud data from one domain to another domain. It is used to transfer the point cloud data from a low-resolution domain to a high-resolution domain. This method is used to improve the accuracy of the model by transferring the data from a low-resolution domain to a high-resolution domain.\n\n6. Point Cloud to Point Cloud (PC2PC) Transfer: This method involves transferring the point cloud data from one domain to another domain. It is used to transfer the point cloud data from a low-resolution domain",
+      "cosine_rag": 0.4007686674594879,
+      "cosine_baseline": 0.394403338432312,
+      "judge_closest": "baseline",
+      "judge_raw": "A"
+    },
+    "12": {
+      "question": "Which of the following models is not described in the documents as a linear classification model: KNN, Perceptron, Logistic regression, Ridge Classifier, Naive Bayes?",
+      "ground_truth": "The answer is the Ridge classifier",
+      "retrieved_pages": [
+        "infra3"
+      ],
+      "rag_answer": "The document does not explicitly state which model is not described as a linear classification model. However, based on the context provided, we can infer that linear classification models typically include models such as KNN (K-Nearest Neighbors), Perceptron, and Ridge Classifier. \n\nThe Perceptron model is a type of linear classifier that uses a single linear decision boundary to separate classes. It is commonly used in binary classification problems. \n\nThe Ridge Classifier is a linear classifier that uses a ridge regression approach to find the optimal linear classifier. It is often used in regression problems.\n\nThe Naive Bayes classifier is a probabilistic classifier that uses Bayes' theorem to make predictions. It is not a linear classifier.\n\nTherefore, the model that is not described as a linear classification model in the documents is the Naive Bayes classifier.",
+      "baseline_answer": "The model that is not described in the documents as a linear classification model is the Ridge Classifier. Ridge Classifier is a non-linear classification model that uses a ridge regression approach to classify data. It is not a linear model.",
+      "cosine_rag": 0.46467486023902893,
+      "cosine_baseline": 0.6521029472351074,
+      "judge_closest": "rag",
+      "judge_raw": "A"
+    },
+    "13": {
+      "question": "In the plotting example with python in the NAML course, which library is used: Plotly, Seaborn, Matplotlib, Bokeh or Altair?",
+      "ground_truth": "The library used is matplotlib.",
+      "retrieved_pages": [
+        "image7"
+      ],
+      "rag_answer": "In the NAML course example with Python, the library used for plotting is Matplotlib. Matplotlib is a plotting library in Python that provides a wide range of plotting functions and tools. It is commonly used for creating various types of plots, including line plots, scatter plots, histograms, and more.",
+      "baseline_answer": "In the NAML (National Assessment of Math and Science Literacy) course, the plotting example with Python uses Matplotlib. Matplotlib is a plotting library in Python that provides a high-level interface for drawing2D graphics. It is often used for plotting data and creating visualizations in scientific and technical applications.",
+      "cosine_rag": 0.8310955762863159,
+      "cosine_baseline": 0.8246469497680664,
+      "judge_closest": "baseline",
+      "judge_raw": "A"
+    },
+    "14": {
+      "question": "Of the six state transitions presented in the context of identification systems, please explain in detail the two that are highlighted.",
+      "ground_truth": "The two hilgited techniques are 4sid, controllable transition.",
+      "retrieved_pages": [
+        "data2"
+      ],
+      "rag_answer": "The two state transitions highlighted in the context of identification systems are:\n\n1. **State Transition 1 (S1)**:\n   - **Description**: This state transition involves the transition from the initial state (I) to the state of being identified (D).\n   - **Explanation**: In this transition, the system identifies the user based on their unique identifier. This transition is crucial for verifying the user's identity and ensuring that only authorized individuals can access the system or perform certain actions.\n\n2. **State Transition 2 (S2)**:\n   - **Description**: This state transition involves the transition from the state of being identified (D) to the state of being authenticated (A).\n   - **Explanation**: In this transition, the system verifies the user's identity by comparing the user's identifier with a predefined set of authorized identifiers. This ensures that only authorized users can access the system or perform certain actions.\n\nThese transitions are essential for maintaining the security and integrity of identification systems, ensuring that only authorized individuals can access the system or perform certain actions.",
+      "baseline_answer": "The two state transitions highlighted in the context of identification systems are:\n\n1. State Transition 1: This transition involves the identification of a person based on their physical characteristics. This can be achieved through various methods such as fingerprinting, facial recognition, iris recognition, or DNA analysis. The process of identifying a person based on physical characteristics is known as biometric identification. Biometric identification is becoming increasingly popular due to its accuracy and reliability, but it also raises concerns about privacy and data security.\n\n2. State Transition 2: This transition involves the identification of a person based on their behavior or actions. This can be achieved through various methods such as behavioral analysis, surveillance cameras, or sensors. The process of identifying a person based on behavior or actions is known as behavioral identification. Behavioral identification is also becoming increasingly popular due to its accuracy and reliability, but it also raises concerns about privacy and data security.\n\nBoth state transitions are important for the development of identification systems, but they have their own advantages and disadvantages. Biometric identification is more accurate and reliable, but it also raises concerns about privacy and data security. Behavioral identification is more accurate and reliable, but it also raises concerns about privacy and data security.",
+      "cosine_rag": 0.41267359256744385,
+      "cosine_baseline": 0.3762466311454773,
+      "judge_closest": "rag",
+      "judge_raw": "A"
+    },
+    "15": {
+      "question": "In the context of hardware infrastructure, provide a detailed overview of the different hardware types between IOE and edge and the advantages and disadvantages of each type.",
+      "ground_truth": "The different harware types are Internet of things, Embedded PC, edge computing.",
+      "retrieved_pages": [
+        "Archi2"
+      ],
+      "rag_answer": "In the context of hardware infrastructure, there are two main types of hardware: IOE (Input/Output Equipment) and edge. IOE refers to hardware that is used for input and output of data, such as keyboards, mice, and monitors. Edge, on the other hand, refers to hardware that is used for processing data, such as servers, routers, and switches.\n\nThe advantages of IOE are that it is easy to install and maintain, and it can be used for a wide range of applications. However, the disadvantages of IOE are that it can be slower and less efficient than edge hardware, and it may not be able to handle large amounts of data.\n\nThe advantages of edge hardware are that it is faster and more efficient than IOE, and it can handle large amounts of data. However, the disadvantages of edge hardware are that it can be more expensive to install and maintain, and it may not be as easy to use as IOE.\n\nIn summary, IOE is a good choice for applications that require input and output of data, while edge hardware is a good choice for applications that require processing of data.",
+      "baseline_answer": "In the context of hardware infrastructure, there are two main types of hardware: IOE (Input/Output Equipment) and edge. IOE refers to hardware that is used to interface with the external world, such as input devices like keyboards and mice, output devices like monitors and printers, and communication devices like routers and switches. Edge, on the other hand, refers to hardware that is used to process data locally, such as servers, routers, and switches. \n\nThe advantages of IOE are that they are more efficient and faster than edge hardware, as they can process data locally and reduce the need for network latency. However, the disadvantages of IOE are that they can be more expensive and require more maintenance than edge hardware. Edge hardware, on the other hand, is more cost-effective and requires less maintenance, but it can be slower and less efficient than IOE. \n\nIn summary, IOE is the preferred choice for hardware infrastructure in the context of input and output, while edge hardware is the preferred choice for processing data locally.",
+      "cosine_rag": 0.519903302192688,
+      "cosine_baseline": 0.5611235499382019,
+      "judge_closest": "baseline",
+      "judge_raw": "A"
+    },
+    "16": {
+      "question": "How many blocks are there in the block diagram presented as part of the ‘Minimum Variance Controller’?",
+      "ground_truth": "There are 6 blocks in the block diagram.",
+      "retrieved_pages": [
+        "Archi1"
+      ],
+      "rag_answer": "There are 10 blocks in the block diagram presented as part of the 'Minimum Variance Controller'.",
+      "baseline_answer": "The block diagram presented as part of the 'Minimum Variance Controller' typically consists of several blocks, each representing a different component of the controller. However, without seeing the specific diagram, it is difficult to provide an exact count of the blocks. \n\nIn general, a minimum variance controller might include the following blocks:\n\n1. **Input Signal**: This block represents the input signal to the controller, which could be a variable such as temperature, pressure, or flow rate.\n\n2. **Process Model**: This block represents the mathematical model of the process being controlled. It might include equations or differential equations that describe the behavior of the process.\n\n3. **Controller**: This block represents the controller itself. It might include components such as a feedback loop, a compensator, or a regulator.\n\n4. **Output Signal**: This block represents the output signal from the controller, which could be a variable such as temperature, pressure, or flow rate.\n\n5. **Error Signal**: This block represents the difference between the actual process variable and the setpoint or reference value.\n\n6. **Error Feedback Loop**: This block represents the feedback loop that compares the error signal with the setpoint and adjusts the controller output to minimize the error.\n\n7. **Error Compensation**: This block represents the compensator or regulator that adjusts the controller output to minimize the error.\n\n8. **Output Feedback Loop**: This block represents the feedback loop that compares the output signal from the controller with the setpoint or reference value and adjusts the controller output to minimize the error.\n\nWithout seeing the specific diagram, it is difficult to provide an exact count of the blocks.",
+      "cosine_rag": 0.7406864762306213,
+      "cosine_baseline": 0.3879193663597107,
+      "judge_closest": "baseline",
+      "judge_raw": "B"
+    },
+    "17": {
+      "question": "In the summary table showing the performance of the various RAID configurations, which ones are rated ‘Very Good’ for both write and read speeds?",
+      "ground_truth": "The configurations rated 'Very good' are 0, 1, 1+0, and 6.",
+      "retrieved_pages": [
+        "mida3"
+      ],
+      "rag_answer": "To determine which RAID configurations are rated 'Very Good' for both write and read speeds, we need to look at the summary table that shows the performance metrics for each RAID configuration. Here are the steps to analyze the table:\n\n1. Identify the RAID configurations that are rated 'Very Good' for both write and read speeds.\n2. Note down the RAID configurations that meet this criterion.\n\nLet's analyze the table:\n\n1. **RAID 5**: \n   - Write speed: 100 MB/s\n   - Read speed: 100 MB/s\n   - Rating: 'Very Good'\n\n2. **RAID 6**: \n   - Write speed: 100 MB/s\n   - Read speed: 100 MB/s\n   - Rating: 'Very Good'\n\n3. **RAID 10**: \n   - Write speed: 100 MB/s\n   - Read speed: 100 MB/s\n   - Rating: 'Very Good'\n\n4. **RAID 50**: \n   - Write speed: 100 MB/s\n   - Read speed: 100 MB/s\n   - Rating: 'Very Good'\n\n5. **RAID 60**: \n   - Write speed: 100 MB/s\n   - Read speed: 100 MB/s\n   - Rating: 'Very Good'\n\n6. **RAID 500**: \n   - Write speed: 100 MB/s\n   - Read speed: 100 MB/s\n   - Rating: 'Very Good'\n\n7. **RAID 600**: \n   - Write speed: 100 MB/s\n   - Read speed: 100 MB/s\n   - Rating: 'Very Good'\n\n8. **RAID 5000**: \n   - Write speed: 100 MB/s\n   - Read speed: 100 MB/s\n   - Rating: 'Very Good'\n\n9. **RAID 6000**: \n   - Write speed: 100 MB/s\n   - Read speed: 100 MB/s\n   - Rating: 'Very Good'\n\n10. **RAID 50000**: \n   - Write speed: 100 MB/s\n   - Read speed: 100 MB/s\n   - Rating: 'Very Good'\n\n1",
+      "baseline_answer": "In the summary table showing the performance of various RAID configurations, the RAID configurations that are rated 'Very Good' for both write and read speeds are RAID 5 and RAID 6. RAID 5 and RAID 6 are both high-performance RAID configurations that provide redundancy and data protection. RAID 5 uses parity data to ensure data integrity, while RAID 6 uses error detection codes to ensure data integrity. Both RAID 5 and RAID 6 configurations are rated 'Very Good' for both write and read speeds because they provide high performance and reliability.",
+      "cosine_rag": 0.33036908507347107,
+      "cosine_baseline": 0.4423096776008606,
+      "judge_closest": "baseline",
+      "judge_raw": "A"
+    }
+  }
+}
