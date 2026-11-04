@@ -7,7 +7,7 @@ import json
 from qwen_vl_utils import process_vision_info
 
 class MultimodalRAGInference:
-    def __init__(self, index_name: str, vlm_model_id: str ="Qwen/Qwen2-VL-2B-Instruct",th=11.35):
+    def __init__(self, index_name: str, vlm_model_id: str ="Qwen/Qwen2-VL-2B-Instruct",th=0.00):
         print(f"Initialisation du pipeline RAG complet ---")
         
         print(f"Chargement de l'index ColPali : {index_name}")
@@ -63,12 +63,17 @@ class MultimodalRAGInference:
         # Étape A : Retrieval (Recherche des pages .jpg pertinentes)
         results = self.retriever.search(query, k=k)
         retrieved_images = []
+
+        # count the amount of tokens in the query : 
+        colpali_processor = self.retriever.model.processor   # attribut à vérifier selon ta version de byaldi
+        batch = colpali_processor.process_queries([query])
+        n_query_vectors = int(batch["attention_mask"].sum())
         
         print(f"Pages extraites par ColPali (Top-{k}) :")
-        retrieved_pages =[doc_id_to_name.get(str(res.doc_id)) for res in results if res.score > self.th]
+        retrieved_pages =[doc_id_to_name.get(str(res.doc_id)) for res in results if res.score/n_query_vectors > self.th]
         retrieved_images = [Image.open(f"data/{doc_name}.jpg") for doc_name in retrieved_pages if doc_name]
-        for  doc_name in  retrieved_pages:
-            print(f"   Nom du fichier : {doc_name}")
+        for  i,doc_name in  enumerate(retrieved_pages):
+            print(f"   Nom du fichier : {doc_name}, Score_top {i+1}  : {results[i].score/n_query_vectors:.4f}")
 
         if not retrieved_images:
             return "Aucun document pertinent n'a été trouvé pour répondre à cette question."
@@ -121,7 +126,7 @@ if __name__ == "__main__":
     # Test rapide du module d'inférence
     rag_system = MultimodalRAGInference(index_name="colpali_index")
     
-    query_test = "When creating a Cassandra keyspace, what was the parameter used to sort the table in ascending order?"
+    query_test = "When was the Eiffel Tower built?"
     
     response = rag_system.answer_query(query_test, k=1) # je dois utiliser k=2 car sinon j'ai trop de tokens d'input dans le modèle
     

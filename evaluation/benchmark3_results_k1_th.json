@@ -1,0 +1,118 @@
+{
+  "summary": {
+    "n_questions": 9,
+    "n_success": 9,
+    "n_errors": 0,
+    "mean_cosine_rag": 0.13547347465323079,
+    "mean_cosine_baseline": 0.5957788642909791,
+    "judge_wins_rag": 5,
+    "judge_wins_baseline": 4,
+    "judge_unparsed": 0,
+    "n_without_retrieved_pages": 7
+  },
+  "per_question": {
+    "0": {
+      "question": "How to write a motivation letter ?",
+      "ground_truth": "Open with a hook that shows why you want this specific role or program, then connect two or three concrete experiences or skills to what they need, and close by saying what you’d bring and inviting a conversation, all in under one page and tailored to the recipient rather than recycled. ",
+      "retrieved_pages": [],
+      "rag_answer": "Aucun document pertinent n'a été trouvé pour répondre à cette question.",
+      "baseline_answer": "Writing a motivation letter is an essential part of the job application process. It is used to explain why you are applying for a particular job and to demonstrate your qualifications and experience. Here are the steps to follow when writing a motivation letter:\n\n1. Start by introducing yourself and your qualifications. Mention your education, work experience, and any relevant skills or certifications that make you a good candidate for the job.\n\n2. Explain why you are interested in the job and how it aligns with your career goals. Provide specific examples of how your skills and experience make you a good fit for the job.\n\n3. Discuss how you plan to contribute to the team and the organization. Explain how your skills and experience will help the organization achieve its goals and objectives.\n\n4. End with a strong closing statement that emphasizes your enthusiasm and commitment to the job. Use positive language and emphasize your enthusiasm for the organization and the position.\n\n5. Proofread your motivation letter carefully to ensure that it is free of errors and grammatical mistakes. Make sure to proofread it multiple times before submitting it.\n\n6. Follow up with a thank-you note to the hiring manager after submitting your application. This shows that you are serious about the job and appreciate the opportunity to apply.\n\nRemember that the motivation letter is a personal statement that showcases your qualifications and experience. It is important to tailor your letter to the specific job and organization, and to demonstrate how your skills and experience make you a good fit for the position.",
+      "cosine_rag": 0.04478573799133301,
+      "cosine_baseline": 0.20039035379886627,
+      "judge_closest": "rag",
+      "judge_raw": "A"
+    },
+    "1": {
+      "question": "What’s the best driving simulator video games ? ",
+      "ground_truth": "For realistic sim racing, the top picks are iRacing (best for competitive online racing), Assetto Corsa Competizione (best GT racing), and Automobilista 2 (great variety and physics), while BeamNG.drive is the best for realistic vehicle physics and crashes, and Gran Turismo 7 is the best console option. ",
+      "retrieved_pages": [
+        "dl2"
+      ],
+      "rag_answer": "The best driving simulator video games are those that offer realistic and immersive driving experiences. Some of the most popular driving simulator games include Gran Turismo, Forza Horizon, and Project Cars. These games allow players to drive various vehicles in different environments and scenarios, and they often include detailed graphics and physics-based simulations. Additionally, many driving simulator games offer multiplayer modes, allowing players to compete against each other in a virtual race. Overall, driving simulator games are a great option for those who enjoy driving and want to experience the thrill of real-world driving in a virtual setting.",
+      "baseline_answer": "There are several driving simulator video games that are highly regarded for their realism and immersive experience. Some of the best driving simulator games include:\n\n  1. Gran Turismo 6: This is one of the most popular driving simulators and features a wide range of cars and tracks to drive on.\n  2. Forza Horizon 4: This game is known for its realistic physics and detailed environment, making it a great choice for fans of the Forza series.\n  3. Gran Turismo Sport: This game is similar to Gran Turismo 6 but offers a more immersive experience with improved physics and a wider range of tracks.\n  4. Project Cars: This game is a spin-off of the Forza series and features a more open-world environment and a wider range of cars to drive.\n  5. Gran Turismo 5: This game is one of the most popular driving simulators and features a wide range of cars and tracks to drive on.\n  6. Gran Turismo 7: This game is a continuation of the Gran Turismo series and features a wide range of cars and tracks to drive on.\n  7. Gran Turismo Sport: This game is similar to Gran Turismo 6 but offers a more immersive experience with improved physics and a wider range of tracks.\n\nThese are just a few examples of the many driving simulator games available. Each game has its own unique features and features that make it stand out from the others.",
+      "cosine_rag": 0.536048412322998,
+      "cosine_baseline": 0.5159159898757935,
+      "judge_closest": "baseline",
+      "judge_raw": "A"
+    },
+    "2": {
+      "question": "How to cook a chicken in the oven ?",
+      "ground_truth": "Pat a whole chicken dry, rub it with oil or butter, salt, and pepper, then roast it breast-side up at 200°C (400°F) for about 1 hour 15 minutes for a 1.5 kg bird, until the thickest part of the thigh reaches 74°C (165°F), and let it rest 10-15 minutes before carving. ",
+      "retrieved_pages": [],
+      "rag_answer": "Aucun document pertinent n'a été trouvé pour répondre à cette question.",
+      "baseline_answer": "To cook a chicken in the oven, follow these steps:\n\n1. Preheat the oven to 350°F (175°C).\n2. Rinse the chicken under cold running water and pat it dry with paper towels.\n3. Season the chicken with salt and pepper.\n4. Place the chicken in a roasting pan.\n5. Add any desired seasonings or herbs to the pan, such as garlic, rosemary, or thyme.\n6. Roast the chicken for 20-25 minutes per pound, or until the chicken is cooked through and the internal temperature reaches 165°F (74°C).\n7. Remove the chicken from the oven and let it rest for 10-15 minutes before carving or serving.\n\nNote: The cooking time may vary depending on the size of the chicken and the desired level of doneness. It is important to use a meat thermometer to ensure the chicken is cooked to the desired temperature.",
+      "cosine_rag": 0.06675317138433456,
+      "cosine_baseline": 0.6192610859870911,
+      "judge_closest": "baseline",
+      "judge_raw": "B"
+    },
+    "3": {
+      "question": "What are the studies to become an attorney ?",
+      "ground_truth": "Typically you earn a law degree (in the US, a bachelor’s followed by a three-year J.D.; in much of Europe, a five-year law degree such as Italy’s laurea magistrale in Giurisprudenza), then complete supervised practical training and pass your jurisdiction’s bar or state exam to be licensed. ",
+      "retrieved_pages": [],
+      "rag_answer": "Aucun document pertinent n'a été trouvé pour répondre à cette question.",
+      "baseline_answer": "To become an attorney, one typically needs to complete a law degree program. There are several ways to obtain a law degree, including:\n\n  1. Attending a law school: Attending a law school is the most common way to obtain a law degree. Law schools offer a variety of programs, including traditional law school programs and online law school programs. Attending a law school requires a significant amount of time and effort, as well as a commitment to the academic and professional development of the student.\n  2. Attending a law school online: Online law schools offer a flexible and convenient way to obtain a law degree. Online law schools offer a variety of programs, including traditional law school programs and online law school programs. Attending an online law school requires a significant amount of time and effort, as well as a commitment to the academic and professional development of the student.\n  3. Attending a law school through a law school partnership: A law school partnership is a partnership between two or more law schools. A law school partnership allows students to attend law school at one of the participating law schools and receive credit toward their law degree from the other participating law school. Attending a law school through a law school partnership requires a significant amount of time and effort, as well as a commitment to the academic and professional development of the student.\n\nIt is important to note that obtaining a law degree requires a significant amount of time and effort, as well as a commitment to the academic and professional development of the student.",
+      "cosine_rag": -0.061769381165504456,
+      "cosine_baseline": 0.42551666498184204,
+      "judge_closest": "rag",
+      "judge_raw": "B"
+    },
+    "4": {
+      "question": "What is the height of the highest mountain range?",
+      "ground_truth": "The highest mountain range is the Himalayas, whose tallest peak, Mount Everest, rises to about 8,849 meters (29,032 feet) above sea level. ",
+      "retrieved_pages": [
+        "ML5"
+      ],
+      "rag_answer": "The height of the highest mountain range cannot be determined from the given information. The image shows a page of a notebook with mathematical equations and diagrams, but it does not provide any information about the height of the highest mountain range. The height of the highest mountain range is a question that requires additional information beyond what is provided in the image.",
+      "baseline_answer": "The highest mountain range in the world is the Himalayas, which stretches across the border between India and Nepal. The Himalayas are a mountain range that spans over 1,000 kilometers (620 miles) and is located in the northern part of the Indian subcontinent. The highest peak in the Himalayas is Mount Everest, which stands at an impressive height of 8,848 meters (29,029 feet) above sea level. The Himalayas are also known for their rugged terrain, steep cliffs, and snow-capped peaks, making them a popular destination for mountaineers and hikers.",
+      "cosine_rag": 0.6328083276748657,
+      "cosine_baseline": 0.8248775005340576,
+      "judge_closest": "baseline",
+      "judge_raw": "B"
+    },
+    "5": {
+      "question": "What is the name of the world's fastest sprinter who is still active?",
+      "ground_truth": "The fastest active sprinter is generally considered to be Jamaica’s Kishane Thompson, whose 100m best of 9.75 seconds makes him the sixth-fastest man in history, behind retired or semi-retired greats like Usain Bolt (the 9.58 world-record holder).   ",
+      "retrieved_pages": [],
+      "rag_answer": "Aucun document pertinent n'a été trouvé pour répondre à cette question.",
+      "baseline_answer": "The world's fastest sprinter who is still active is Usain Bolt. He is a Jamaican sprinter who has set numerous world records and is considered one of the greatest sprinters of all time. Bolt's career began in the 1990s and he has continued to compete at the highest level, winning multiple Olympic gold medals and breaking numerous world records. He is known for his powerful sprinting style and his ability to accelerate quickly from a standing start. Bolt's legacy as a sprinter is significant, and he has inspired many young athletes to pursue their dreams of becoming world-class sprinters.",
+      "cosine_rag": -0.007602455094456673,
+      "cosine_baseline": 0.8181362152099609,
+      "judge_closest": "rag",
+      "judge_raw": "B"
+    },
+    "6": {
+      "question": "Which of these first names is not a girl's name: Jean, Jeanne, Christine, Josianne?",
+      "ground_truth": "Jean is the odd one out, since in French it’s a masculine name, while Jeanne, Christine, and Josianne are feminine. ",
+      "retrieved_pages": [],
+      "rag_answer": "Aucun document pertinent n'a été trouvé pour répondre à cette question.",
+      "baseline_answer": "The first name that is not a girl's name is Josianne.",
+      "cosine_rag": 0.07204469293355942,
+      "cosine_baseline": 0.6142520904541016,
+      "judge_closest": "rag",
+      "judge_raw": "A"
+    },
+    "7": {
+      "question": "Which is the taller tree, the oak or the baobab?",
+      "ground_truth": "The oak is generally taller, often reaching 20-40 m, while baobabs typically top out around 5-25 m, though they are far thicker and can live for thousands of years. ",
+      "retrieved_pages": [],
+      "rag_answer": "Aucun document pertinent n'a été trouvé pour répondre à cette question.",
+      "baseline_answer": "The oak and the baobab are both trees, but they differ in height and structure. The oak is a deciduous tree that typically reaches heights of around 30 to 50 meters, depending on the species. The oak's trunk is usually straight and relatively narrow, with a diameter of around 10 to 20 centimeters. The bark of the oak is smooth and often reddish-brown in color.\n\nOn the other hand, the baobab is a large tree that can reach heights of up to 30 meters or more. The baobab's trunk is typically wider and more robust, with a diameter of around 20 to 30 centimeters. The bark of the baobab is often rough and reddish-brown in color, and the tree's branches are often very thick and sturdy.\n\nIn summary, the oak is typically shorter and more slender than the baobab, while the baobab is much taller and more robust.",
+      "cosine_rag": -0.1072535514831543,
+      "cosine_baseline": 0.7533562183380127,
+      "judge_closest": "rag",
+      "judge_raw": "B"
+    },
+    "8": {
+      "question": "What shape is Spain?",
+      "ground_truth": "Mainland Spain is roughly square, often compared to an ox hide (as the ancient geographer Strabo described it), with the Balearic Islands, Canary Islands, and the cities of Ceuta and Melilla lying outside that outline. ",
+      "retrieved_pages": [],
+      "rag_answer": "Aucun document pertinent n'a été trouvé pour répondre à cette question.",
+      "baseline_answer": "Spain is a country that is shaped like a long, narrow rectangle. It is located in the southwestern part of Europe and is bordered by France to the north, Portugal to the west, and the Atlantic Ocean to the south. The country is approximately 50,000 square kilometers in size and has a population of around 47 million people.",
+      "cosine_rag": 0.043446317315101624,
+      "cosine_baseline": 0.5903036594390869,
+      "judge_closest": "baseline",
+      "judge_raw": "B"
+    }
+  }
+}

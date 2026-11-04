@@ -17,7 +17,7 @@ warnings.filterwarnings(
 )
 
 class MultimodalRAGInference:
-    def __init__(self, index_name: str, vlm_model_id: str ="Qwen/Qwen2-VL-2B-Instruct",th=11.35):
+    def __init__(self, index_name: str, vlm_model_id: str ="Qwen/Qwen2-VL-2B-Instruct",th=0.43):
         print(f"Initialisation du pipeline RAG complet ---")
         
         print(f"Chargement de l'index ColPali : {index_name}")
@@ -101,12 +101,17 @@ class MultimodalRAGInference:
         # Étape A : Retrieval (Recherche des pages .jpg pertinentes)
         results = self.retriever.search(query, k=k)
 
+        #count the token query : 
+        colpali_processor = self.retriever.model.processor   # attribut à vérifier selon ta version de byaldi
+        batch = colpali_processor.process_queries([query])
+        n_query_vectors = int(batch["attention_mask"].sum())
+
         print(f"Pages extraites par ColPali (Top-{k}) :")
-        retrieved_pages = [doc_id_to_name.get(str(res.doc_id)) for res in results if res.score > self.th]
+        retrieved_pages = [doc_id_to_name.get(str(res.doc_id)) for res in results if res.score/n_query_vectors > self.th]
         self.last_retrieved_pages = [p for p in retrieved_pages if p]  # pour le benchmark
         retrieved_images = [Image.open(f"data/{doc_name}.jpg") for doc_name in retrieved_pages if doc_name]
-        for doc_name in retrieved_pages:
-            print(f"   Nom du fichier : {doc_name}")
+        for i,doc_name in enumerate(retrieved_pages):
+            print(f"   Nom du fichier : {doc_name}, Score_top {i+1} : {results[i].score/n_query_vectors:.4f}")
 
         # Étape B : Génération AVEC RAG (images + requête)
         if retrieved_images:
@@ -267,9 +272,9 @@ if __name__ == "__main__":
 
     results = run_benchmark(
         rag_system,
-        benchmark_path="evaluation/benchmark.json",
-        output_path="evaluation/benchmark_results_k3.json",
-        k=3,  # k=2 pour limiter les tokens d'entrée
+        benchmark_path="evaluation/benchmark3.json",
+        output_path="evaluation/benchmark3_results_k3_th.json",
+        k=3,  
     )
   
     print("\n===== Résumé =====")

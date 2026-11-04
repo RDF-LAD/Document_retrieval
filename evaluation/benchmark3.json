@@ -1,0 +1,74 @@
+[
+    {
+        "ID": "rej3",
+        "type": "rejection",
+        "docs": "None",
+        "question": "How to write a motivation letter ?",
+        "answer": "Open with a hook that shows why you want this specific role or program, then connect two or three concrete experiences or skills to what they need, and close by saying what you’d bring and inviting a conversation, all in under one page and tailored to the recipient rather than recycled. ",
+        "why LLM could not work": "Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies."
+    },
+        {
+        "ID": "rej4",
+        "type": "rejection",
+        "docs": "None",
+        "question": "What’s the best driving simulator video games ? ",
+        "answer": "For realistic sim racing, the top picks are iRacing (best for competitive online racing), Assetto Corsa Competizione (best GT racing), and Automobilista 2 (great variety and physics), while BeamNG.drive is the best for realistic vehicle physics and crashes, and Gran Turismo 7 is the best console option. ",
+        "why LLM could not work": "Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies."
+    },
+        {
+        "ID": "rej5",
+        "type": "rejection",
+        "docs": "None",
+        "question": "How to cook a chicken in the oven ?",
+        "answer": "Pat a whole chicken dry, rub it with oil or butter, salt, and pepper, then roast it breast-side up at 200°C (400°F) for about 1 hour 15 minutes for a 1.5 kg bird, until the thickest part of the thigh reaches 74°C (165°F), and let it rest 10-15 minutes before carving. ",
+        "why LLM could not work": "Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies."
+    },
+        {
+        "ID": "rej6",
+        "type": "rejection",
+        "docs": "None",
+        "question": "What are the studies to become an attorney ?",
+        "answer": "Typically you earn a law degree (in the US, a bachelor’s followed by a three-year J.D.; in much of Europe, a five-year law degree such as Italy’s laurea magistrale in Giurisprudenza), then complete supervised practical training and pass your jurisdiction’s bar or state exam to be licensed. ",
+        "why LLM could not work": "Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies."
+    },
+        {
+        "ID": "rej7",
+        "type": "rejection",
+        "docs": "None",
+        "question": "What is the height of the highest mountain range?",
+        "answer": "The highest mountain range is the Himalayas, whose tallest peak, Mount Everest, rises to about 8,849 meters (29,032 feet) above sea level. ",
+        "why LLM could not work": "Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies."
+    },
+        {
+        "ID": "rej8",
+        "type": "rejection",
+        "docs": "None",
+        "question": "What is the name of the world's fastest sprinter who is still active?",
+        "answer": "The fastest active sprinter is generally considered to be Jamaica’s Kishane Thompson, whose 100m best of 9.75 seconds makes him the sixth-fastest man in history, behind retired or semi-retired greats like Usain Bolt (the 9.58 world-record holder).   ",
+        "why LLM could not work": "Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies."
+    },
+        {
+        "ID": "rej9",
+        "type": "rejection",
+        "docs": "None",
+        "question": "Which of these first names is not a girl's name: Jean, Jeanne, Christine, Josianne?",
+        "answer": "Jean is the odd one out, since in French it’s a masculine name, while Jeanne, Christine, and Josianne are feminine. ",
+        "why LLM could not work": "Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies."
+    },    {
+        "ID": "rej11",
+        "type": "rejection",
+        "docs": "None",
+        "question": "Which is the taller tree, the oak or the baobab?",
+        "answer": "The oak is generally taller, often reaching 20-40 m, while baobabs typically top out around 5-25 m, though they are far thicker and can live for thousands of years. ",
+        "why LLM could not work": "Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies."
+    },    {
+        "ID": "rej10",
+        "type": "rejection",
+        "docs": "None",
+        "question": "What shape is Spain?",
+        "answer": "Mainland Spain is roughly square, often compared to an ox hide (as the ancient geographer Strabo described it), with the Balearic Islands, Canary Islands, and the cities of Ceuta and Melilla lying outside that outline. ",
+        "why LLM could not work": "Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies."
+    }
+     
+    
+]

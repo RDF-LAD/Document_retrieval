@@ -1,0 +1,67 @@
+[
+    {
+        "ID": "sup1",
+        "type": "single_hop",
+        "docs": "Archi1",
+        "question": "How does the MESI protocol cache coherence strategy works ?",
+        "answer": "The states of cache/ block memory are : shared, modified, unccached.",
+        "why LLM could not work": "Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies."
+    },
+     {
+        "ID": "sup2",
+        "type": "single_hop",
+        "docs": "cyber3",
+        "question": "How does format string exploit the structure of the stack ?",
+        "answer": "We printf on something that can be overwritten. Knowing what to write, where to write and the displacement of the stack, we can jump to the stack place where the shellcode is.",
+        "why LLM could not work": "Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies."
+    },
+         {
+        "ID": "sup3",
+        "type": "single_hop",
+        "docs": "data4",
+        "question": "What’s the Consistency, Availability, Partition tolerance theorem  ?",
+        "answer": "We have to choose between the three we can’t insure more than two of the Consistency, Availability, Partition tolerance.",
+        "why LLM could not work": "Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies."
+    },
+             {
+        "ID": "sup4",
+        "type": "single_hop",
+        "docs": "dl6",
+        "question": "How does the transformers architecture exploit the encoder/decoder structure ?",
+        "answer": "It used self attention in the decoder and encoder and cross attention in the decoder.",
+        "why LLM could not work": "Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies."
+    },
+                 {
+        "ID": "sup5",
+        "type": "single_hop",
+        "docs": "dl7",
+        "question": "What are the basic blocks of the ResNet architecture ?",
+        "answer": "Conv then Batch normalization then conv then batch normalization and finally the output is summed with input.",
+        "why LLM could not work": "Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies."
+    },
+                     {
+        "ID": "sup6",
+        "type": "single_hop",
+        "docs": "image4",
+        "question": "How does the discrete cosinus transform can be used to enforce sparsity ?",
+        "answer": "It enforces sparsity by reprensenting a vector in the discrete cosinus transforme domain in the analysis phase. Then we threshold the dct representation and finally we reconstruct in the synthesis phase.",
+        "why LLM could not work": "Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies."
+    },
+                         {
+        "ID": "sup7",
+        "type": "single_hop",
+        "question": "In system dependability, what’s the typical failure evolution with lifetime ?",
+        "docs": "infra4",
+        "answer": "Early life : high failure rate. Useful life : lower failure rate. End of life : high failure rate.",
+        "why LLM could not work": "Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies."
+    },
+                             {
+        "ID": "sup8",
+        "type": "single_hop",
+        "question": "What are the steps of the 4SID method to go from Inpulse response to State Space representation ?",
+        "docs": "mida8",
+        "answer": "First : identify system order using Hankle Matrix. Second : factoryze Hankle matrix into observable and Reachable matrices. Finally compute F, H,G, and D from observable and reachable matrices.",
+        "why LLM could not work": "Il est probable que la sequential method soit devin�e car c'est la plus simple mais la Hough Transform est moins actuelle et il existe bien d'autres strat�gies."
+    }
+    
+]

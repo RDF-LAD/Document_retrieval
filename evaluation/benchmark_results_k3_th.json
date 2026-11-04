@@ -1,0 +1,246 @@
+{
+  "summary": {
+    "n_questions": 18,
+    "n_success": 18,
+    "n_errors": 0,
+    "mean_cosine_rag": 0.29830404645245934,
+    "mean_cosine_baseline": 0.4305333395799001,
+    "judge_wins_rag": 6,
+    "judge_wins_baseline": 12,
+    "judge_unparsed": 0,
+    "n_without_retrieved_pages": 7
+  },
+  "per_question": {
+    "0": {
+      "question": "What are the two methods presented for solving a multi-model fitting problem?",
+      "ground_truth": "The two methods are the Sequential method and the Hough Transform.",
+      "retrieved_pages": [
+        "mida1",
+        "data4",
+        "ML2"
+      ],
+      "rag_answer": "The two methods presented for solving a multi-model fitting problem are:\n\n1. **Bayesian Model Averaging (BMA)**: This method involves averaging the predictions of all models in the ensemble. The predictions are combined to form a single model that represents the average of the individual models. This method is particularly useful when the models are highly correlated and the ensemble size is large.\n\n2. **Bayesian Model Selection (BMS)**: This method involves selecting the best model from the ensemble based on some criterion. The selection process can be based on criteria such as the Akaike Information Criterion (AIC), Bayesian Information Criterion (BIC), or other statistical measures. The selected model is then used to make predictions. BMS is particularly useful when the ensemble size is small and the models are not highly correlated.\n\nIn summary, the two methods presented for solving a multi-model fitting problem are Bayesian Model Averaging (BMA) and Bayesian Model Selection (BMS).",
+      "baseline_answer": "The two methods presented for solving a multi-model fitting problem are:\n\n1. Model Selection: This method involves selecting the best model from a set of candidate models based on a predefined criterion. The criterion could be based on the goodness of fit, the complexity of the model, or the interpretability of the model. The selected model is then used to generate predictions or estimates for the data.\n\n2. Model Combination: This method involves combining multiple models to improve the overall performance of the model. The combination can be achieved through various techniques such as weighted averaging, averaging, or averaging with weights. The resulting model is then used to generate predictions or estimates for the data.\n\nBoth methods require careful consideration of the trade-offs between model complexity, goodness of fit, and interpretability. The choice of method depends on the specific requirements of the problem at hand.",
+      "cosine_rag": 0.4188104271888733,
+      "cosine_baseline": 0.4848651885986328,
+      "judge_closest": "rag",
+      "judge_raw": "A"
+    },
+    "1": {
+      "question": "When creating a Cassandra keyspace, what was the parameter used to sort the table in ascending order?",
+      "ground_truth": "The parameter used is age",
+      "retrieved_pages": [],
+      "rag_answer": "Aucun document pertinent n'a été trouvé pour répondre à cette question.",
+      "baseline_answer": "The parameter used to sort the table in ascending order when creating a Cassandra keyspace is `sort_key`.",
+      "cosine_rag": 0.06251643598079681,
+      "cosine_baseline": 0.08721144497394562,
+      "judge_closest": "baseline",
+      "judge_raw": "A"
+    },
+    "2": {
+      "question": "What is the very first way described to mitigate an SQL injection attack?",
+      "ground_truth": "The very first way described is input sanitization.",
+      "retrieved_pages": [],
+      "rag_answer": "Aucun document pertinent n'a été trouvé pour répondre à cette question.",
+      "baseline_answer": "The very first way described to mitigate an SQL injection attack is through the use of parameterized queries. \n\nIn SQL, a parameterized query is a query that uses placeholders (e.g., ?) to represent variables in the query. This allows the user to input data into the query without the risk of SQL injection attacks. \n\nThe placeholders are replaced with actual values during the execution of the query, which prevents the injection of malicious code into the query. This method is considered the most secure way to mitigate SQL injection attacks because it eliminates the risk of injecting malicious code into the query.\n\nOther methods to mitigate SQL injection attacks include:\n\n1. Using prepared statements: This method involves using prepared statements to execute queries. Prepared statements are executed before the query is executed, and the placeholders are replaced with actual values during the execution of the query.\n\n2. Using SQL injection libraries: These libraries are designed to handle SQL injection attacks and provide protection against them.\n\n3. Using input validation: This method involves checking the input data to ensure that it is valid before it is used in the query.\n\n4. Using input sanitization: This method involves sanitizing the input data to remove any malicious code before it is used in the query.\n\n5. Using input encryption: This method involves encrypting the input data to prevent it from being intercepted during the transmission or storage.",
+      "cosine_rag": 0.0099942022934556,
+      "cosine_baseline": 0.4356077313423157,
+      "judge_closest": "baseline",
+      "judge_raw": "B"
+    },
+    "3": {
+      "question": "What are the four types of extension covered in the context of Kalman filter extension?",
+      "ground_truth": "The four types of extension are multistep prediction, exogeneous input, time-varying system, and extended KF for non linear system.",
+      "retrieved_pages": [
+        "mida4"
+      ],
+      "rag_answer": "The four types of extension covered in the context of Kalman filter extension are:\n\n1. **Type I Extension**: This type of extension involves adding a new state variable to the original system. In the context of Kalman filter extension, this would typically involve adding a new state variable to the system to account for additional dynamics or measurements.\n\n2. **Type II Extension**: This type of extension involves adding a new measurement to the original system. In the context of Kalman filter extension, this would typically involve adding a new measurement to the system to account for additional measurements or observations.\n\n3. **Type III Extension**: This type of extension involves adding a new measurement to the original system and also adding a new state variable to the system. In the context of Kalman filter extension, this would typically involve adding a new measurement to the system and also adding a new state variable to the system to account for additional dynamics or measurements.\n\n4. **Type IV Extension**: This type of extension involves adding a new measurement to the original system and also adding a new state variable to the system and also adding a new measurement to the system. In the context of Kalman filter extension, this would typically involve adding a new measurement to the system and also adding a new state variable to the system and also adding a new measurement to the system to account for additional dynamics or measurements.",
+      "baseline_answer": "The four types of extension covered in the context of Kalman filter extension are:\n\n1. State-space extension: This type of extension involves adding a new state variable to the Kalman filter model. The new state variable is added to the existing state vector and the measurement vector. This type of extension is useful when the system being modeled has additional states that are not directly observable.\n\n2. Measurement extension: This type of extension involves adding a new measurement to the Kalman filter model. The new measurement is added to the existing measurement vector and the state vector. This type of extension is useful when the system being modeled has additional measurements that are not directly observable.\n\n3. Observation extension: This type of extension involves adding a new observation to the Kalman filter model. The new observation is added to the existing observation vector and the state vector. This type of extension is useful when the system being modeled has additional observations that are not directly observable.\n\n4. State-space observation extension: This type of extension involves adding a new observation to the Kalman filter model and also adding a new state variable to the model. This type of extension is useful when the system being modeled has additional observations and states that are not directly observable.",
+      "cosine_rag": 0.5262589454650879,
+      "cosine_baseline": 0.5527908802032471,
+      "judge_closest": "baseline",
+      "judge_raw": "A"
+    },
+    "4": {
+      "question": "What are the two architectures presented in the context of transformers for computer vision?",
+      "ground_truth": "The two architectures are ViT and DETR.",
+      "retrieved_pages": [],
+      "rag_answer": "Aucun document pertinent n'a été trouvé pour répondre à cette question.",
+      "baseline_answer": "The two architectures presented in the context of transformers for computer vision are:\n\n1. Transformer architecture: This architecture is a type of neural network that is used for tasks such as image recognition and object detection. It is based on the idea of using a series of layers to transform the input data into a representation that can be used for further analysis. The Transformer architecture uses a series of self-attention layers to learn the relationships between different parts of the input data. This allows the Transformer architecture to learn long-range dependencies between different parts of the input data, which can be useful for tasks such as image recognition and object detection.\n\n2. Transformer encoder-decoder architecture: This architecture is used for tasks such as image translation and captioning. It consists of two parts: an encoder and a decoder. The encoder takes an input image and encodes it into a representation that can be used by the decoder. The decoder then uses this representation to generate a new image or a new caption. The Transformer encoder-decoder architecture uses a series of self-attention layers to learn the relationships between different parts of the input data, which can be useful for tasks such as image translation and captioning.",
+      "cosine_rag": -0.00473606213927269,
+      "cosine_baseline": 0.4450882077217102,
+      "judge_closest": "baseline",
+      "judge_raw": "B"
+    },
+    "5": {
+      "question": "In processor architecture, what are the two local scheduling techniques described?",
+      "ground_truth": "The two techniques are Loop unrolling and Software pipelining.",
+      "retrieved_pages": [
+        "Archi2",
+        "infra5",
+        "mida2"
+      ],
+      "rag_answer": "In processor architecture, two local scheduling techniques described are:\n\n1. **Instruction Level Scheduling (ILS)**: This technique schedules instructions within a single instruction unit (SIU) of the processor. It is used to optimize the execution of instructions that are executed in parallel.\n\n2. **Data Level Scheduling (DLS)**: This technique schedules data within a single data unit (DU) of the processor. It is used to optimize the execution of instructions that access data in parallel.\n\nBoth ILS and DLS are used to improve the performance of processors by optimizing the execution of instructions and data.",
+      "baseline_answer": "In processor architecture, two local scheduling techniques are:\n\n1. Priority-based scheduling: This technique assigns a priority to each thread or process based on its importance or urgency. The scheduler then schedules the threads or processes with the highest priority first. This technique is commonly used in multi-threaded applications where the priority of each thread is determined based on its execution time or resource requirements.\n\n2. Round-robin scheduling: This technique schedules threads or processes in a fixed order, typically starting with the highest priority thread and moving through the lower priority threads in a circular fashion. This technique is commonly used in single-threaded applications where the order of execution is predetermined and does not change.\n\nBoth of these techniques are used to manage the execution of threads or processes in a processor.",
+      "cosine_rag": 0.4846750795841217,
+      "cosine_baseline": 0.45913323760032654,
+      "judge_closest": "baseline",
+      "judge_raw": "A"
+    },
+    "6": {
+      "question": "What is the architecture described in the ‘Classical CNN’ section?",
+      "ground_truth": "The architecture is ResNet.",
+      "retrieved_pages": [
+        "Archi1",
+        "dl7",
+        "cyber2"
+      ],
+      "rag_answer": "The architecture described in the ‘Classical CNN’ section is a convolutional neural network (CNN) architecture. CNNs are a type of neural network that are particularly effective for tasks such as image classification and object detection. They are based on the idea of using a series of convolutional layers to extract features from the input data. Each convolutional layer consists of a set of filters that are applied to the input data, and the output of each filter is then used to generate a feature map. The feature maps are then used to classify the input data.",
+      "baseline_answer": "The architecture described in the \"Classical CNN\" section refers to a type of neural network architecture used in computer vision tasks. It is a convolutional neural network (CNN) that uses convolutional layers to extract features from images. \n\nIn a classical CNN, the input image is first passed through a series of convolutional layers, which perform a series of operations on the image data. These operations include filtering the image data with a set of filters that are designed to detect features such as edges, corners, and textures. \n\nThe output of the convolutional layers is then passed through a series of pooling layers, which reduce the spatial dimensions of the image data. Pooling layers are used to reduce the amount of data that needs to be processed by the subsequent layers, which can help to improve the computational efficiency of the network. \n\nThe output of the pooling layers is then passed through a series of fully connected layers, which perform a series of operations on the data to classify or regress the image data. \n\nThe architecture described in the \"Classical CNN\" section typically includes multiple convolutional layers, pooling layers, and fully connected layers. The number of layers and the type of layers used can vary depending on the specific application and the desired performance of the network.",
+      "cosine_rag": 0.4163918197154999,
+      "cosine_baseline": 0.19306306540966034,
+      "judge_closest": "rag",
+      "judge_raw": "A"
+    },
+    "7": {
+      "question": "How many columns are proposed for the k-SVD algorithm’s dictionary?",
+      "ground_truth": "The number of column is 256.",
+      "retrieved_pages": [
+        "NAML2",
+        "image8",
+        "ML4"
+      ],
+      "rag_answer": "The k-SVD algorithm's dictionary is proposed to have 10 columns.",
+      "baseline_answer": "The k-SVD algorithm is a method used to find the sparsest approximation of a matrix to another matrix. The number of columns proposed for the k-SVD algorithm's dictionary is typically equal to the number of columns in the original matrix. This means that the algorithm will find the sparsest approximation of the original matrix using the columns of the dictionary.",
+      "cosine_rag": 0.282436728477478,
+      "cosine_baseline": 0.20856735110282898,
+      "judge_closest": "baseline",
+      "judge_raw": "A"
+    },
+    "8": {
+      "question": "What are the different programming languages related to NoSQL data management mentioned in the documents?",
+      "ground_truth": "The different programming languages are Cassandra, Redis,Spark,Neo4J,MongoDB,Elastic Search",
+      "retrieved_pages": [],
+      "rag_answer": "Aucun document pertinent n'a été trouvé pour répondre à cette question.",
+      "baseline_answer": "The different programming languages related to NoSQL data management mentioned in the documents are:\n\n1. MongoDB: MongoDB is a NoSQL database management system that is used for storing and managing large amounts of data. It is written in JavaScript and is used for storing and managing data in a distributed environment.\n\n2. Cassandra: Cassandra is a distributed, open-source NoSQL database management system that is used for storing and managing data in a distributed environment. It is written in Java and is used for storing and managing data in a distributed environment.\n\n3. Hadoop: Hadoop is a distributed computing framework that is used for storing and managing data in a distributed environment. It is written in Java and is used for storing and managing data in a distributed environment.\n\n4. Apache HBase: HBase is a NoSQL database management system that is used for storing and managing data in a distributed environment. It is written in Java and is used for storing and managing data in a distributed environment.\n\n5. Apache Ignite: Ignite is a NoSQL database management system that is used for storing and managing data in a distributed environment. It is written in Java and is used for storing and managing data in a distributed environment.\n\n6. Apache Kafka: Kafka is a distributed, open-source message broker that is used for storing and managing data in a distributed environment. It is written in Java and is used for storing and managing data in a distributed environment.",
+      "cosine_rag": 0.027503058314323425,
+      "cosine_baseline": 0.3380478024482727,
+      "judge_closest": "rag",
+      "judge_raw": "A"
+    },
+    "9": {
+      "question": "What are the variants of the ISTA algorithm presented in the ‘L1 sparsity’ section?",
+      "ground_truth": "The variants presented are Backtracking ISTA, LISTA, FISTA, IRLS, MOD.",
+      "retrieved_pages": [
+        "image7"
+      ],
+      "rag_answer": "The variants of the ISTA algorithm presented in the 'L1 sparsity' section are:\n\n1. ISTA with L1 regularization:\n   - The L1 regularization term is added to the objective function.\n   - The L1 regularization term penalizes the magnitude of the variables.\n   - The L1 regularization term is used to promote sparsity in the solution.\n\n2. ISTA with L1 regularization and L2 regularization:\n   - The L1 regularization term is added to the objective function.\n   - The L2 regularization term is added to the objective function.\n   - The L1 regularization term and L2 regularization terms are used to promote both sparsity and smoothness in the solution.\n\n3. ISTA with L1 regularization and L2 regularization and L2 regularization:\n   - The L1 regularization term is added to the objective function.\n   - The L2 regularization term is added to the objective function.\n   - The L1 regularization term, L2 regularization term, and L2 regularization term are used to promote both sparsity and smoothness in the solution.\n\n4. ISTA with L1 regularization and L2 regularization and L2 regularization:\n   - The L1 regularization term is added to the objective function.\n   - The L2 regularization term is added to the objective function.\n   - The L1 regularization term, L2 regularization term, and L2 regularization term are used to promote both sparsity and smoothness in the solution.\n\n5. ISTA with L1 regularization and L2 regularization and L2 regularization:\n   - The L1 regularization term is added to the objective function.\n   - The L2 regularization term is added to the objective function.\n   - The L1 regularization term, L2 regularization term, and L2 regularization term are used to promote both sparsity and smoothness in the solution.\n\n6. ISTA with L1 regularization and L2 regularization and L2 regularization:\n   - The L1 regularization term is added to the objective function.\n   - The L2 regularization term is added to the objective function.\n   - The L1 regularization term, L2 regularization term, and L2 regularization term are used to promote both sparsity and smoothness in the solution.\n\n7. ISTA with L1 regularization and L2 regularization and L2 regularization:\n   - The L1 regularization term is added to the objective function.\n   - The L2 regularization term is added to the objective function.\n   - The L1 regularization term, L2 regularization term, and L2 regularization term",
+      "baseline_answer": "The ISTA (Iterative Shrinkage and Thresholding Algorithm) algorithm is a popular method for solving linear inverse problems. In the context of the \"L1 sparsity\" section, the ISTA algorithm is used to solve linear inverse problems with sparsity constraints.\n\nThe variants of the ISTA algorithm presented in this section are:\n\n1. ISTA with L1 regularization: This variant of the ISTA algorithm incorporates L1 regularization into the optimization process. L1 regularization penalizes the magnitude of the coefficients in the solution vector, which can help to identify and remove sparsity in the solution.\n\n2. ISTA with L1 regularization and sparsity constraints: This variant of the ISTA algorithm incorporates both L1 regularization and sparsity constraints into the optimization process. This allows for the identification of both sparsity and sparsity constraints in the solution vector.\n\n3. ISTA with L1 regularization and sparsity constraints and a thresholding operator: This variant of the ISTA algorithm incorporates both L1 regularization and sparsity constraints into the optimization process, but also includes a thresholding operator to further refine the solution.\n\n4. ISTA with L1 regularization and sparsity constraints and a thresholding operator and a regularization parameter: This variant of the ISTA algorithm incorporates both L1 regularization and sparsity constraints into the optimization process, but also includes a regularization parameter to further refine the solution.\n\nThese variants of the ISTA algorithm are used to solve linear inverse problems with sparsity constraints.",
+      "cosine_rag": 0.26446178555488586,
+      "cosine_baseline": 0.4316403865814209,
+      "judge_closest": "baseline",
+      "judge_raw": "A"
+    },
+    "10": {
+      "question": "In the inequality bounding the difference between the training loss and the true loss as a function of VC, what is the parameter in the denominator of the bound?",
+      "ground_truth": "The parameter is the square root of the number of sampling examples in the training set.",
+      "retrieved_pages": [
+        "ML5",
+        "dl8"
+      ],
+      "rag_answer": "The parameter in the denominator of the bound is the number of training examples, denoted as \\( N \\).",
+      "baseline_answer": "In the context of the VC bound, the parameter in the denominator of the bound that represents the difference between the training loss and the true loss is typically the number of training samples, denoted as \\( n \\). The VC bound states that the training loss is bounded by the true loss plus a constant times the square root of the number of training samples. Mathematically, this can be expressed as:\n\n\\[ \\text{Training Loss} \\leq \\text{True Loss} + C \\sqrt{n} \\]\n\nwhere \\( C \\) is a constant that depends on the complexity of the model and the distribution of the data. The denominator \\( n \\) represents the number of training samples used to estimate the true loss.",
+      "cosine_rag": 0.6837012767791748,
+      "cosine_baseline": 0.47483235597610474,
+      "judge_closest": "rag",
+      "judge_raw": "A"
+    },
+    "11": {
+      "question": "Describe the six modelling methods presented in the context of deep learning for 3D point clouds.",
+      "ground_truth": "The six modelling methods are pointbased, multiview, voxel based, graph based, continuous convolution, superpoint based.",
+      "retrieved_pages": [
+        "dl4",
+        "dl2"
+      ],
+      "rag_answer": "The six modelling methods presented in the context of deep learning for 3D point clouds are:\n\n1. **Point Clouds**: This method involves representing 3D point clouds as a set of points in 3D space. It is used to model the shape and structure of 3D objects from a single image.\n\n2. **Point Clouds with a Point Cloud**: This method combines the benefits of both point clouds and point clouds with a point cloud. It involves modeling the shape of 3D objects from a single image and then using the point cloud data to refine the model.\n\n3. **Point Clouds with a Point Cloud with a Point Cloud**: This method involves modeling the shape of 3D objects from a single image and then using the point cloud data to refine the model. It is similar to the previous method but uses a different approach to combine the two data sources.\n\n4. **Point Clouds with a Point Cloud with a Point Cloud with a Point Cloud**: This method involves modeling the shape of 3D objects from a single image and then using the point cloud data to refine the model. It is similar to the previous method but uses a different approach to combine the three data sources.\n\n5. **Point Clouds with a Point Cloud with a Point Cloud with a Point Cloud with a Point Cloud**: This method involves modeling the shape of 3D objects from a single image and then using the point cloud data to refine the model. It is similar to the previous method but uses a different approach to combine the four data sources.\n\n6. **Point Clouds with a Point Cloud with a Point Cloud with a Point Cloud with a Point Cloud with a Point Cloud**: This method involves modeling the shape of 3D objects from a single image and then using the point cloud data to refine the model. It is similar to the previous method but uses a different approach to combine the five data sources.",
+      "baseline_answer": "The six modelling methods presented in the context of deep learning for 3D point clouds are:\n\n1. Point Cloud to Point Cloud (PC2PC) Transfer: This method involves transferring the point cloud data from one domain to another domain. It is used to transfer the point cloud data from a low-resolution domain to a high-resolution domain. This method is used to improve the accuracy of the model by transferring the data from a low-resolution domain to a high-resolution domain.\n\n2. Point Cloud to Point Cloud (PC2PC) Transfer: This method involves transferring the point cloud data from one domain to another domain. It is used to transfer the point cloud data from a low-resolution domain to a high-resolution domain. This method is used to improve the accuracy of the model by transferring the data from a low-resolution domain to a high-resolution domain.\n\n2. Point Cloud to Point Cloud (PC2PC) Transfer: This method involves transferring the point cloud data from one domain to another domain. It is used to transfer the point cloud data from a low-resolution domain to a high-resolution domain. This method is used to improve the accuracy of the model by transferring the data from a low-resolution domain to a high-resolution domain.\n\n3. Point Cloud to Point Cloud (PC2PC) Transfer: This method involves transferring the point cloud data from one domain to another domain. It is used to transfer the point cloud data from a low-resolution domain to a high-resolution domain. This method is used to improve the accuracy of the model by transferring the data from a low-resolution domain to a high-resolution domain.\n\n4. Point Cloud to Point Cloud (PC2PC) Transfer: This method involves transferring the point cloud data from one domain to another domain. It is used to transfer the point cloud data from a low-resolution domain to a high-resolution domain. This method is used to improve the accuracy of the model by transferring the data from a low-resolution domain to a high-resolution domain.\n\n5. Point Cloud to Point Cloud (PC2PC) Transfer: This method involves transferring the point cloud data from one domain to another domain. It is used to transfer the point cloud data from a low-resolution domain to a high-resolution domain. This method is used to improve the accuracy of the model by transferring the data from a low-resolution domain to a high-resolution domain.\n\n6. Point Cloud to Point Cloud (PC2PC) Transfer: This method involves transferring the point cloud data from one domain to another domain. It is used to transfer the point cloud data from a low-resolution domain",
+      "cosine_rag": 0.5627226233482361,
+      "cosine_baseline": 0.394403338432312,
+      "judge_closest": "baseline",
+      "judge_raw": "A"
+    },
+    "12": {
+      "question": "Which of the following models is not described in the documents as a linear classification model: KNN, Perceptron, Logistic regression, Ridge Classifier, Naive Bayes?",
+      "ground_truth": "The answer is the Ridge classifier",
+      "retrieved_pages": [],
+      "rag_answer": "Aucun document pertinent n'a été trouvé pour répondre à cette question.",
+      "baseline_answer": "The model that is not described in the documents as a linear classification model is the Ridge Classifier. Ridge Classifier is a non-linear classification model that uses a ridge regression approach to classify data. It is not a linear model.",
+      "cosine_rag": -0.02202095463871956,
+      "cosine_baseline": 0.652103066444397,
+      "judge_closest": "baseline",
+      "judge_raw": "B"
+    },
+    "13": {
+      "question": "In the plotting example with python in the NAML course, which library is used: Plotly, Seaborn, Matplotlib, Bokeh or Altair?",
+      "ground_truth": "The library used is matplotlib.",
+      "retrieved_pages": [],
+      "rag_answer": "Aucun document pertinent n'a été trouvé pour répondre à cette question.",
+      "baseline_answer": "In the NAML (National Assessment of Math and Science Literacy) course, the plotting example with Python uses Matplotlib. Matplotlib is a plotting library in Python that provides a high-level interface for drawing2D graphics. It is often used for plotting data and creating visualizations in scientific and technical applications.",
+      "cosine_rag": 0.09208164364099503,
+      "cosine_baseline": 0.8246469497680664,
+      "judge_closest": "rag",
+      "judge_raw": "B"
+    },
+    "14": {
+      "question": "Of the six state transitions presented in the context of identification systems, please explain in detail the two that are highlighted.",
+      "ground_truth": "The two hilgited techniques are 4sid, controllable transition.",
+      "retrieved_pages": [
+        "data2"
+      ],
+      "rag_answer": "The two state transitions highlighted in the context of identification systems are:\n\n1. **State Transition 1 (S1)**:\n   - **Description**: This state transition involves the transition from the initial state (I) to the state of being identified (D).\n   - **Explanation**: In this transition, the system identifies the user based on their unique identifier. This transition is crucial for verifying the user's identity and ensuring that only authorized individuals can access the system or perform certain actions.\n\n2. **State Transition 2 (S2)**:\n   - **Description**: This state transition involves the transition from the state of being identified (D) to the state of being authenticated (A).\n   - **Explanation**: In this transition, the system verifies the user's identity by comparing the user's identifier with a predefined set of authorized identifiers. This ensures that only authorized users can access the system or perform certain actions.\n\nThese transitions are essential for maintaining the security and integrity of identification systems, ensuring that only authorized individuals can access the system or perform certain actions.",
+      "baseline_answer": "The two state transitions highlighted in the context of identification systems are:\n\n1. State Transition 1: This transition involves the identification of a person based on their physical characteristics. This can be achieved through various methods such as fingerprinting, facial recognition, iris recognition, or DNA analysis. The process of identifying a person based on physical characteristics is known as biometric identification. Biometric identification is becoming increasingly popular due to its accuracy and reliability, but it also raises concerns about privacy and data security.\n\n2. State Transition 2: This transition involves the identification of a person based on their behavior or actions. This can be achieved through various methods such as behavioral analysis, surveillance cameras, or sensors. The process of identifying a person based on behavior or actions is known as behavioral identification. Behavioral identification is also becoming increasingly popular due to its accuracy and reliability, but it also raises concerns about privacy and data security.\n\nBoth state transitions are important for the development of identification systems, but they have their own advantages and disadvantages. Biometric identification is more accurate and reliable, but it also raises concerns about privacy and data security. Behavioral identification is more accurate and reliable, but it also raises concerns about privacy and data security.",
+      "cosine_rag": 0.41267359256744385,
+      "cosine_baseline": 0.3762466311454773,
+      "judge_closest": "rag",
+      "judge_raw": "A"
+    },
+    "15": {
+      "question": "In the context of hardware infrastructure, provide a detailed overview of the different hardware types between IOE and edge and the advantages and disadvantages of each type.",
+      "ground_truth": "The different harware types are Internet of things, Embedded PC, edge computing.",
+      "retrieved_pages": [
+        "Archi2",
+        "infra5"
+      ],
+      "rag_answer": "In the context of hardware infrastructure, there are two main types of hardware: IOE (Input/Output Equipment) and edge. IOE refers to hardware that is directly connected to the end user, such as keyboards, mice, and monitors. Edge, on the other hand, refers to hardware that is connected to the network or server, such as routers, switches, and servers.\n\nAdvantages of IOE:\n1. Direct connection to end users: IOE hardware is directly connected to the end user, which means that it can be easily updated and maintained.\n2. Low latency: IOE hardware is typically located closer to the end user, which means that it can provide faster response times.\n3. Cost-effective: IOE hardware is typically cheaper than edge hardware, which can be a significant advantage for organizations with limited budgets.\n\nDisadvantages of IOE:\n1. Limited scalability: IOE hardware is typically limited in terms of scalability, which means that it may not be able to handle large amounts of data or traffic.\n2. Limited customization: IOE hardware is typically limited in terms of customization, which means that it may not be able to meet specific requirements or needs.\n3. Limited security: IOE hardware may not be as secure as edge hardware, which means that it may be more vulnerable to attacks or breaches.\n\nAdvantages of edge:\n1. Scalability: Edge hardware is typically more scalable than IOE hardware, which means that it can handle larger amounts of data or traffic.\n2. Customization: Edge hardware is typically more customizable than IOE hardware, which means that it can meet specific requirements or needs.\n3. Security: Edge hardware is typically more secure than IOE hardware, which means that it can protect against attacks or breaches.\n\nDisadvantages of edge:\n1. Cost: Edge hardware is typically more expensive than IOE hardware, which can be a significant disadvantage for organizations with limited budgets.\n2. Limited connectivity: Edge hardware may not be as connected as IOE hardware, which means that it may not be able to access all necessary resources or services.\n3. Limited performance: Edge hardware may not be as performant as IOE hardware, which means that it may not be able to handle large amounts of data or traffic.",
+      "baseline_answer": "In the context of hardware infrastructure, there are two main types of hardware: IOE (Input/Output Equipment) and edge. IOE refers to hardware that is used to interface with the external world, such as input devices like keyboards and mice, output devices like monitors and printers, and communication devices like routers and switches. Edge, on the other hand, refers to hardware that is used to process data locally, such as servers, routers, and switches. \n\nThe advantages of IOE are that they are more efficient and faster than edge hardware, as they can process data locally and reduce the need for network latency. However, the disadvantages of IOE are that they can be more expensive and require more maintenance than edge hardware. Edge hardware, on the other hand, is more cost-effective and requires less maintenance, but it can be slower and less efficient than IOE. \n\nIn summary, IOE is the preferred choice for hardware infrastructure in the context of input and output, while edge hardware is the preferred choice for processing data locally.",
+      "cosine_rag": 0.43165987730026245,
+      "cosine_baseline": 0.5611234903335571,
+      "judge_closest": "baseline",
+      "judge_raw": "A"
+    },
+    "16": {
+      "question": "How many blocks are there in the block diagram presented as part of the ‘Minimum Variance Controller’?",
+      "ground_truth": "There are 6 blocks in the block diagram.",
+      "retrieved_pages": [
+        "Archi1"
+      ],
+      "rag_answer": "There are 10 blocks in the block diagram presented as part of the 'Minimum Variance Controller'.",
+      "baseline_answer": "The block diagram presented as part of the 'Minimum Variance Controller' typically consists of several blocks, each representing a different component of the controller. However, without seeing the specific diagram, it is difficult to provide an exact count of the blocks. \n\nIn general, a minimum variance controller might include the following blocks:\n\n1. **Input Signal**: This block represents the input signal to the controller, which could be a variable such as temperature, pressure, or flow rate.\n\n2. **Process Model**: This block represents the mathematical model of the process being controlled. It might include equations or differential equations that describe the behavior of the process.\n\n3. **Controller**: This block represents the controller itself. It might include components such as a feedback loop, a compensator, or a regulator.\n\n4. **Output Signal**: This block represents the output signal from the controller, which could be a variable such as temperature, pressure, or flow rate.\n\n5. **Error Signal**: This block represents the difference between the actual process variable and the setpoint or reference value.\n\n6. **Error Feedback Loop**: This block represents the feedback loop that compares the error signal with the setpoint and adjusts the controller output to minimize the error.\n\n7. **Error Compensation**: This block represents the compensator or regulator that adjusts the controller output to minimize the error.\n\n8. **Output Feedback Loop**: This block represents the feedback loop that compares the output signal from the controller with the setpoint or reference value and adjusts the controller output to minimize the error.\n\nWithout seeing the specific diagram, it is difficult to provide an exact count of the blocks.",
+      "cosine_rag": 0.7406864762306213,
+      "cosine_baseline": 0.3879193663597107,
+      "judge_closest": "baseline",
+      "judge_raw": "B"
+    },
+    "17": {
+      "question": "In the summary table showing the performance of the various RAID configurations, which ones are rated ‘Very Good’ for both write and read speeds?",
+      "ground_truth": "The configurations rated 'Very good' are 0, 1, 1+0, and 6.",
+      "retrieved_pages": [],
+      "rag_answer": "Aucun document pertinent n'a été trouvé pour répondre à cette question.",
+      "baseline_answer": "In the summary table showing the performance of various RAID configurations, the RAID configurations that are rated 'Very Good' for both write and read speeds are RAID 5 and RAID 6. RAID 5 and RAID 6 are both high-performance RAID configurations that provide redundancy and data protection. RAID 5 uses parity data to ensure data integrity, while RAID 6 uses error detection codes to ensure data integrity. Both RAID 5 and RAID 6 configurations are rated 'Very Good' for both write and read speeds because they provide high performance and reliability.",
+      "cosine_rag": -0.020344119518995285,
+      "cosine_baseline": 0.4423096179962158,
+      "judge_closest": "baseline",
+      "judge_raw": "A"
+    }
+  }
+}
