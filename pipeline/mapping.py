@@ -2,6 +2,9 @@ import gzip
 import json
 import os
 
+"""
+Need to map name of the documents with thir respective id after embedding
+"""
 def load_json_gz(path):
     with gzip.open(path, "rt", encoding="utf-8") as f:
         return json.load(f)

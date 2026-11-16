@@ -18,54 +18,45 @@ class MultimodalRAGInference:
 
         self.th = th
 
-# 1. Configuration de la quantification 4-bit
+# 1.  quantification 4-bit
         quantization_config = BitsAndBytesConfig(
             load_in_4bit=True,
             bnb_4bit_compute_dtype=torch.bfloat16 if self.device == "cuda" else torch.float32,
             bnb_4bit_quant_type="nf4"
         )
         
-        # Qwen2-VL utilise une résolution dynamique : sans limite, une page haute résolution
-        # peut produire des dizaines de milliers de patchs. 1 token visuel = 28x28 pixels.
-        # self.processor = AutoProcessor.from_pretrained(
-        #     vlm_model_id,
-        #     size={
-        #         "shortest_edge": 256 * 28 * 28,  # équivalent de min_pixels
-        #         "longest_edge": 640 * 28 * 28,   # équivalent de max_pixels (~640 tokens visuels max par page)
-        #     },
-        # )
+
         self.processor = AutoProcessor.from_pretrained(
     vlm_model_id,
     min_pixels=256 * 28 * 28,
-    max_pixels=640 * 28 * 28,  # ~640 tokens visuels max par page
+    max_pixels=640 * 28 * 28, 
 )
         
-        # 2. Chargement du modèle avec un mapping strict sur cuda:0 pour éviter les splits CPU/GPU
         self.model = Qwen2VLForConditionalGeneration.from_pretrained(
             vlm_model_id,
             quantization_config=quantization_config,
-            device_map={"": 0}, # Force tout le modèle sur le premier GPU (index 0)
+            device_map={"": 0}, 
             torch_dtype=torch.bfloat16
         )
             
         
-        print("--- ✅ Pipeline prêt ---")
+        print("--- Pipeline prêt ---")
 
     def answer_query(self, query: str, k: int = 2) -> str:
         """
         Exécute la recherche des k documents les plus pertinents, 
         puis génère une réponse textuelle basée sur ces images et la query.
         """
-        print(f"\n🔍 Requête : '{query}'")
+        print(f"\n Requête : '{query}'")
             #load mapping
         with open("evaluation/mapping_id_name.json", "r", encoding="utf-8") as f:
             doc_id_to_name = json.load(f)
-        # Étape A : Retrieval (Recherche des pages .jpg pertinentes)
+        # Étape A : Retrieval 
         results = self.retriever.search(query, k=k)
         retrieved_images = []
 
         # count the amount of tokens in the query : 
-        colpali_processor = self.retriever.model.processor   # attribut à vérifier selon ta version de byaldi
+        colpali_processor = self.retriever.model.processor  
         batch = colpali_processor.process_queries([query])
         n_query_vectors = int(batch["attention_mask"].sum())
         
@@ -79,7 +70,6 @@ class MultimodalRAGInference:
             return "Aucun document pertinent n'a été trouvé pour répondre à cette question."
 
         # Étape B : Construction du prompt multimodal pour le VLM
-        # On formate le prompt pour injecter les images et la question
         messages = [
             {
                 "role": "user",
@@ -95,7 +85,7 @@ class MultimodalRAGInference:
 
         # Préparation des inputs via le processeur du VLM
         text = self.processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-        image_inputs, video_inputs = process_vision_info(messages) # Fonction utilitaire standard Qwen-VL
+        image_inputs, video_inputs = process_vision_info(messages) 
         
         inputs = self.processor(
             text=[text],
@@ -108,7 +98,7 @@ class MultimodalRAGInference:
         # Étape C : Génération de la réponse textuelle
         print(" Génération de la réponse par le VLM...")
         if self.device == "cuda":
-            torch.cuda.empty_cache()  # libère la mémoire en cache laissée par ColPali
+            torch.cuda.empty_cache()  
         with torch.no_grad():
             generated_ids = self.model.generate(**inputs, max_new_tokens=512)
         
@@ -128,7 +118,7 @@ if __name__ == "__main__":
     
     query_test = "When was the Eiffel Tower built?"
     
-    response = rag_system.answer_query(query_test, k=1) # je dois utiliser k=2 car sinon j'ai trop de tokens d'input dans le modèle
+    response = rag_system.answer_query(query_test, k=1) # au dessu de k= 3 trop de tokens d'entrée pour le modèle
     
     print("Réponse générée ---")
     print(response)

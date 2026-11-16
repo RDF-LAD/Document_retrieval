@@ -6,7 +6,7 @@ import gzip
 
 def main():
     INDEX_NAME = "colpali_index"
-    BENCHMARK_PATH = "evaluation/benchmark.json" # Adaptez selon votre structure
+    BENCHMARK_PATH = "evaluation/benchmark.json" 
     
     print(f"Chargement de l'index '{INDEX_NAME}' ---")
 

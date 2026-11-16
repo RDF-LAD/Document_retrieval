@@ -9,7 +9,7 @@ import json
 from qwen_vl_utils import process_vision_info
 import time
 
-# Avertissement de dépréciation sans conséquence sur min_pixels/max_pixels
+#eviter avertissement 
 warnings.filterwarnings(
     "ignore",
     message=".*min_pixels.*max_pixels.*",
@@ -28,34 +28,33 @@ class MultimodalRAGInference:
 
         self.th = th
 
-# 1. Configuration de la quantification 4-bit
+# 1. Quantification 4-bit
         quantization_config = BitsAndBytesConfig(
             load_in_4bit=True,
             bnb_4bit_compute_dtype=torch.bfloat16 if self.device == "cuda" else torch.float32,
             bnb_4bit_quant_type="nf4"
         )
         
-        # Qwen2-VL utilise une résolution dynamique : sans limite, une page haute résolution
-        # peut produire des dizaines de milliers de patchs. 1 token visuel = 28x28 pixels.
+        # Qwen2-VL utilise une résolution dynamique
         self.processor = AutoProcessor.from_pretrained(
             vlm_model_id,
             min_pixels=256 * 28 * 28,
-            max_pixels=640 * 28 * 28,  # ~640 tokens visuels max par page
+            max_pixels=640 * 28 * 28,  # we limit the number of token by doc
         )
         
-        # 2. Chargement du modèle avec un mapping strict sur cuda:0 pour éviter les splits CPU/GPU
+        # 2. Chargement du modèle 
         self.model = Qwen2VLForConditionalGeneration.from_pretrained(
             vlm_model_id,
             quantization_config=quantization_config,
-            device_map={"": 0}, # Force tout le modèle sur le premier GPU (index 0)
+            device_map={"": 0}, # force modèle sur GPu pour éviter bug
             torch_dtype=torch.bfloat16
         )
             
         
-        print("--- ✅ Pipeline prêt ---")
+        print("---Pipeline prêt ---")
 
     def _generate(self, messages, max_new_tokens: int = 512, **gen_kwargs) -> str:
-        """Génère une réponse à partir de messages au format chat Qwen-VL (avec ou sans images)."""
+        """Génère une réponse à partir de messages avec Qwen-VL"""
         t0 = time.time()
         text = self.processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
         image_inputs, video_inputs = process_vision_info(messages)  # (None, None) si pas d'images
@@ -91,18 +90,18 @@ class MultimodalRAGInference:
         """
         Retourne deux réponses pour pouvoir les comparer :
           - rag_output      : réponse du VLM avec les k pages récupérées par ColPali
-          - baseline_output : réponse du même VLM avec la seule requête (sans RAG)
+          - baseline_output : réponse du même VLM avec la seule requête 
         """
-        print(f"\n🔍 Requête : '{query}'")
+        print(f"\n Requête : '{query}'")
         # load mapping
         with open("evaluation/mapping_id_name.json", "r", encoding="utf-8") as f:
             doc_id_to_name = json.load(f)
 
-        # Étape A : Retrieval (Recherche des pages .jpg pertinentes)
+        # Étape A : Retrieval
         results = self.retriever.search(query, k=k)
 
         #count the token query : 
-        colpali_processor = self.retriever.model.processor   # attribut à vérifier selon ta version de byaldi
+        colpali_processor = self.retriever.model.processor 
         batch = colpali_processor.process_queries([query])
         n_query_vectors = int(batch["attention_mask"].sum())
 
@@ -113,7 +112,7 @@ class MultimodalRAGInference:
         for i,doc_name in enumerate(retrieved_pages):
             print(f"   Nom du fichier : {doc_name}, Score_top {i+1} : {results[i].score/n_query_vectors:.4f}")
 
-        # Étape B : Génération AVEC RAG (images + requête)
+        # Étape B : Génération AVEC RAG 
         if retrieved_images:
             rag_messages = [
                 {
@@ -121,30 +120,30 @@ class MultimodalRAGInference:
                     "content": [
                         *[{"type": "image", "image": img} for img in retrieved_images],
                         {
-                            "type": "text",
+                        "type": "text",
                             "text": f"Using only the visual materials provided above, answer the following question in detail and in technical terms: {query}"
                         }
                     ]
                 }
             ]
-            print(" Génération de la réponse AVEC RAG...")
+            print(" Génération de la réponse AVEC RAG")
             rag_output = self._generate(rag_messages)
         else:
             rag_output = "Aucun document pertinent n'a été trouvé pour répondre à cette question."
 
-        # Étape C : Génération SANS RAG (requête seule, même consigne hors mention des images)
+        # Étape C : Génération SANS RAG 
         baseline_messages = [
             {
                 "role": "user",
                 "content": [
                     {
-                        "type": "text",
+                    "type": "text",
                         "text": f"Answer the following question in detail and in technical terms: {query}"
                     }
                 ]
             }
         ]
-        print(" Génération de la réponse SANS RAG (requête seule)...")
+        print(" Génération de la réponse SANS RAG")
         baseline_output = self._generate(baseline_messages)
 
         return rag_output, baseline_output
@@ -153,8 +152,7 @@ class MultimodalRAGInference:
                       baseline_output: str, rag_first: bool = True) -> dict:
         """
         Demande au LLM lequel des deux outputs est le plus proche de la ground truth.
-        L'ordre de présentation (A/B) est paramétrable pour compenser le biais de position.
-        Retourne {"winner": "rag" | "baseline" | "unparsed", "raw": <sortie brute du juge>}.
+        (biais de position corrigé)
         """
         if rag_first:
             answer_a, answer_b, a_is = rag_output, baseline_output, "rag"
@@ -189,7 +187,7 @@ def run_benchmark(rag_system: MultimodalRAGInference,
                   k: int = 2,
                   embed_model_id: str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2") -> dict:
     """
-    Pose toutes les questions de benchmark.json (clés 'question' et 'answer', ou 'anwer')
+    Pose toutes les questions de benchmark.json
     et enregistre pour chacune : réponses avec/sans RAG, cosine similarity avec la ground truth
     et verdict du LLM juge. Les résultats sont sauvegardés au fur et à mesure dans output_path.
     """
@@ -199,7 +197,7 @@ def run_benchmark(rag_system: MultimodalRAGInference,
     with open(benchmark_path, "r", encoding="utf-8") as f:
         benchmark = json.load(f)
 
-    # Embeddings sur CPU pour ne pas consommer la VRAM du VLM
+    # laisser le GPU pour VLM
     embedder = SentenceTransformer(embed_model_id, device="cpu")
     embedder.max_seq_length = 512
 
@@ -215,7 +213,7 @@ def run_benchmark(rag_system: MultimodalRAGInference,
            
             retrieved_pages = list(rag_system.last_retrieved_pages)
 
-            # Cosine similarity avec la ground truth (embeddings normalisés -> produit scalaire)
+            # Cosine similarity avec la ground truth (car normalisés)
             emb = embedder.encode(
                 [ground_truth, rag_output, baseline_output],
                 normalize_embeddings=True, convert_to_numpy=True,
@@ -223,7 +221,7 @@ def run_benchmark(rag_system: MultimodalRAGInference,
             cos_rag = float(np.dot(emb[0], emb[1]))
             cos_baseline = float(np.dot(emb[0], emb[2]))
 
-            # Juge LLM : on alterne l'ordre A/B d'une question à l'autre (biais de position)
+            # Juge LLM : on alterne l'ordre A/B d'une question à l'autre 
             verdict = rag_system.judge_closest(
                 question, ground_truth, rag_output, baseline_output, rag_first=(i % 2 == 0)
             )
@@ -239,13 +237,13 @@ def run_benchmark(rag_system: MultimodalRAGInference,
                 "judge_closest": verdict["winner"],
                 "judge_raw": verdict["raw"],
             }
-        except Exception as e:  # une question en échec (ex. OOM) ne doit pas arrêter tout le benchmark
-            print(f"   ⚠️ Erreur sur la question {i} : {e}")
+        except Exception as e:  # si echec question
+            print(f"   Erreur sur la question {i} : {e}")
             per_question[str(i)] = {"question": question, "ground_truth": ground_truth, "error": str(e)}
             if torch.cuda.is_available():
                 torch.cuda.empty_cache()
 
-        # Sauvegarde incrémentale
+        # Sauvegarde sequentille
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump({"per_question": per_question}, f, indent=2, ensure_ascii=False)
 
